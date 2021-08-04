@@ -22,3 +22,4 @@ function watchArchivos(){
 }
 exports.cssMinificado = cssMinificado;
 exports.watchArchivos = watchArchivos;
+exports.default = series(css, watchArchivos);

@@ -1,0 +1,35 @@
+html{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+body{
+    font-family: $fuente_principal;
+    font-size: 1.3rem;
+}
+p{
+    font-size: 2rem;
+    color: $negro;
+}
+.contenedor{
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+h3{
+    font-family: $fuente_secundaria;
+    font-size: 1.5rem;
+    font-weight: $delgada;
+    color: $negro;
+}

@@ -1,0 +1,91 @@
+header{
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    padding: .3rem 0;
+    z-index: 1;
+    background-color: $blanco;
+    .fijo{
+        transition: 1s ease all;
+        box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 0;
+    }
+    .navegacion{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        @include tablet{
+            justify-content: space-between;
+        }
+        .menu-desplegable{
+            margin: auto 1rem;
+            font-size: 2rem;
+            color: $azul;
+            &:hover{
+                transition: 1s ease all;
+                color: darken($azul, 20);
+            }
+            @include tablet{
+                display: none;
+            }
+        }
+    }
+    .logo{
+        width: 9rem;
+        @include tablet{
+            width: 13.5rem;
+        }
+    }
+    .menu-principal{
+        display: none;
+        @include tablet{
+            display: flex;
+            margin: auto 0;
+            width: 42rem;
+            text-align: center;
+            justify-content: space-between;
+        }
+    }
+    .boton-principal{
+        display: block;
+        background-color: $azul;
+        color: $blanco;
+        padding: .6rem 1rem;
+        width: 10rem;
+        margin: 0;
+        border-radius: 5px;
+        font-weight: $regular;
+        &:hover{
+            transition: .7s ease all;
+            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+            background-color: darken($azul, 10);
+        }
+    }
+}
+.input-buscar{
+    color: $azul;
+    border: 3px solid $azul;
+    border-radius: 3rem;
+    padding: .3rem;
+    width: 23rem;
+    input{
+        width: 90%;
+        border: 0;
+        margin: 0;
+        &:focus{
+            border: none;
+            outline: none;
+        }
+    }
+}
+.enlaces{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    i{
+        display: block;
+        color: $azul;
+        margin: .3rem 0;
+        font-size: 1.7rem;
+        cursor: pointer;
+    }
+}

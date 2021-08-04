@@ -1,0 +1,53 @@
+.herramientas{
+    height: 100vh;
+
+    h3{
+        margin: 1.5rem 0;
+        padding: .5rem 1.5rem;
+        background-color: darken($blanco, 7);
+    }
+    .filtro{
+        ul{
+            li{
+                margin: 1rem;
+                color: darken($azul, 15);
+                list-style: none;
+                a{
+                    color: darken($azul, 15);
+                }
+                form{
+                    display: grid;
+                    label{
+                        margin: 1rem 0;
+                    }
+                    select{
+                        color: $negro;
+                        border: 3px solid $azul;
+                        border-radius: 3rem;
+                        padding: .3rem;
+                        background-color: $blanco;
+                        &:focus{
+                            outline: none;
+                            border: 3px solid $azul;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.categorias{
+    ul{
+        li{
+            list-style: none;
+            margin: 1.5rem;
+            a{
+                color: darken($azul, 15);
+            }
+        }
+    }
+}
+aside{
+    width: 23rem;
+    background-color: darken($blanco, 2);
+}
