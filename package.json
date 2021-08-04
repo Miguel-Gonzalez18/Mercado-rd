@@ -1,0 +1,31 @@
+{
+  "name": "mercado-rd",
+  "version": "1.0.0",
+  "description": "Tienda Virtual",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miguel-Gonzalez18/Mercado-rd.git"
+  },
+  "keywords": [
+    "Sass",
+    "Gulp"
+  ],
+  "author": "Miguel Angel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Miguel-Gonzalez18/Mercado-rd/issues"
+  },
+  "homepage": "https://github.com/Miguel-Gonzalez18/Mercado-rd#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.37.3"
+  }
+}
