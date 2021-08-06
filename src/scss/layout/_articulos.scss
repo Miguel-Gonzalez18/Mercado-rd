@@ -1,0 +1,70 @@
+
+.articulos{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+
+    
+    grid-template-columns: repeat(4, 1fr);
+    @include telefono{
+        grid-template-columns: repeat(2, 1fr);
+        gap: .5rem;
+        
+    }
+    @include tablet{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include desktop{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .card{
+        @include telefono{
+            min-width: 10rem;
+            max-width: 15rem;
+            min-height: 10rem;
+            max-height: 15rem;
+            font-size: .8rem;
+            overflow: hidden;
+        }
+        @include tablet{
+            min-width: 10rem;
+            max-width: 15rem;
+            min-height: 13rem;
+            max-height: 18rem;
+            font-size: 1rem;
+            overflow: hidden;
+        }
+        @include desktop{
+            min-width: 15rem;
+            max-width: 20rem;
+            min-height: 18rem;
+            max-height: 20rem;
+            overflow: hidden;
+        }
+        .card-head{
+            position: relative;
+            margin-bottom: .5rem;
+            border-radius: 10px;
+            width: 100%;
+            height: 10rem;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            img{
+                position: absolute;
+                right: 5px;
+                bottom: 5px;
+                width: 3rem;
+                border-radius: 50%;
+                border: 1px solid $azul;
+            }
+        }
+    }
+    
+}

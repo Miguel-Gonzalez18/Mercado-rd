@@ -21,12 +21,12 @@
     <title>Mercado RD | ¡Todo lo que necesitas!</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="contenedor">
             <nav class="navegacion">
                 <a href="index.html"><img class="logo" src="src/img/logo.png" alt="logo"></a>
                 <div class="menu-desplegable">
-                    <i class="fad fa-bars"></i>
+                    <i class="fad fa-bars" onclick="menu_activo()"></i>
                 </div>
                 <div class="menu-principal">
                     <div class="enlaces">
@@ -48,7 +48,7 @@
     </header>
 
     <div class="contenido-principal">
-        <aside>
+        <aside class="menu-main">
             <div class="herramientas">
                 <h3>Explorar</h3>
                 <div class="filtro">
@@ -118,11 +118,20 @@
                 </div>
             </div>
         </aside>
-        <div class="contenedor">
-            <main class="articulos">
-                
-            </main>
-        </div>
+        <main class="articulos">
+            <a href="#">
+                <div class="card">
+                    <div class="card-head" style="background-image: url('./src/fotos/animal.jpg');">
+                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
+                    </div>
+                    <div class="card-body">
+                        <h2><span>RD$  </span>65,000</h3>
+                        <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
+                    </div>
+                </div>
+            </a>
+        </main>
     </div>
+    <script src="src/js/app.js"></script>
 </body>
 </html>

@@ -1,3 +1,8 @@
+.contenido-principal{
+    @include tablet{
+        display: flex;
+    }
+}
 .herramientas{
     height: 100vh;
 
@@ -40,7 +45,7 @@
     ul{
         li{
             list-style: none;
-            margin: 1.5rem;
+            margin: 1.8rem;
             a{
                 color: darken($azul, 15);
             }
@@ -48,6 +53,31 @@
     }
 }
 aside{
-    width: 23rem;
     background-color: darken($blanco, 2);
+    z-index: 1;
+    @include telefono{
+        transition: .5s ease all;
+        position: fixed;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+        overflow: scroll;
+    }
+    @include tablet{
+        position: relative;
+        overflow: hidden;
+        left: 0;
+        margin-top: .5rem;
+        min-width: 20rem;
+        max-width: 25rem;
+    }
+    @include desktop{
+        margin-top: .5rem;
+        min-width: 25rem;
+        max-width: 30rem;
+    }
+}
+.activo{
+    position: fixed;
+    left: 0;
 }
