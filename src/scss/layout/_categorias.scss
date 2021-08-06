@@ -5,7 +5,44 @@
 }
 .herramientas{
     height: 100vh;
+    .cuenta{
+        text-align: center;
+        p{
+            font-size: 1.3rem;
+            margin: .5rem 0;
+            color: $azul;
+        }
+        img{
+            width: 6rem;
+            border: 2px solid $rojo;
+            border-radius: 50%;
+        }
+        ul{
+            li{
+                margin: 1rem 0;
+            }
+        }
+    }
 
+    .buscar{
+        width: 100%;
+        .input-buscar{
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+    .redes-sociales{
+        width: 100%;
+        font-size: 2rem;
+        text-align: center;
+        a{
+            margin: 0 .5rem;
+            color: $verde;
+        }
+    }
+    .small{
+        font-size: .7rem;
+    }
     h3{
         margin: 1.5rem 0;
         padding: .5rem 1.5rem;

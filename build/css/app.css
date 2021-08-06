@@ -514,6 +514,41 @@ header .boton-principal:hover {
 .herramientas {
   height: 100vh;
 }
+.herramientas .cuenta {
+  text-align: center;
+}
+.herramientas .cuenta p {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: #1E88E5;
+}
+.herramientas .cuenta img {
+  width: 6rem;
+  border: 2px solid #C0392B;
+  border-radius: 50%;
+}
+.herramientas .cuenta ul li {
+  margin: 1rem 0;
+}
+.herramientas .buscar {
+  width: 100%;
+}
+.herramientas .buscar .input-buscar {
+  width: 90%;
+  margin: 0 auto;
+}
+.herramientas .redes-sociales {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+}
+.herramientas .redes-sociales a {
+  margin: 0 0.5rem;
+  color: #117a8b;
+}
+.herramientas .small {
+  font-size: 0.7rem;
+}
 .herramientas h3 {
   margin: 1.5rem 0;
   padding: 0.5rem 1.5rem;
