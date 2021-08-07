@@ -3,6 +3,14 @@
         display: flex;
     }
 }
+.sesion-movil{
+    @include telefono{
+        display: block;
+    }
+    @include tablet{
+        display: none;
+    }
+}
 .herramientas{
     height: 100vh;
     .cuenta{
@@ -12,14 +20,22 @@
             margin: .5rem 0;
             color: $azul;
         }
-        img{
+        .img-perfil{
+            margin: 0 auto;
             width: 6rem;
+            height: 6rem;
             border: 2px solid $rojo;
             border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         ul{
             li{
                 margin: 1rem 0;
+                a{
+                    color: $verde;
+                }
             }
         }
     }
@@ -41,7 +57,7 @@
         }
     }
     .small{
-        font-size: .7rem;
+        font-size: 1rem;
     }
     h3{
         margin: 1.5rem 0;

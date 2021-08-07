@@ -40,7 +40,22 @@
                         </div>
                     </form>
                     <div class="botones">
-                        <a href="#" class="boton-principal">Iniciar</a>
+                        <a href="#" class="boton-principal"><i class="fad fa-door-open"></i> Iniciar</a>
+                        <a href="#" class="boton-principal"><i class="fad fa-plus-circle"></i> Publicar</a>
+                    </div>
+                    <div class="action">
+                        <div class="perfil">
+                            <div onclick="dropdown()" class="img" style="background-image: url('src/img/user.svg');"></div>
+                        </div>
+                        <div class="dropdown">
+                            <h3>Miguel Angel</h3>
+                            <ul>
+                                <li><a href="#"><i class="fad fa-user-circle"></i> Mi perfil</a></li>
+                                <li><a href="#"><i class="far fa-comment-lines"></i> Chat</a></li>
+                                <li><a href="#"><i class="fad fa-cog"></i> Configuración</a></li>
+                                <li><a href="#"><i class="fad fa-sign-in-alt"></i> Cerrar sesión</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -50,30 +65,38 @@
     <div class="contenido-principal">
         <aside class="menu-main">
             <div class="herramientas">
-                <h3>Tu cuenta</h3>
-                <div class="cuenta">
-                    <img src="src/img/user.svg" alt="foto de perfil">
-                    <p>Nombre de usuario</p>
-                    <ul>
-                        <li>
-                            <a href="#">Ver pérfil</a>
-                        </li>
-                        <li>
-                            <a href="#">Cerrar sesión</a>
-                        </li>
-                        <li>
-                            <a href="#">Iniciar sesión</a>
-                        </li>
-                    </ul>
-                </div>
-                <h3>Buscar</h3>
-                <div class="buscar">
-                    <form action="" method="post">
-                        <div class="input-buscar">
-                            <i class="fas fa-search"></i>
-                            <input type="search" name="buscar" id="buscar" placeholder="Que deseas buscar?">
-                        </div>
-                    </form>
+                <div class="sesion-movil">
+                    <h3>Tu cuenta</h3>
+                    <div class="cuenta">
+                        <div class="img-perfil" style="background-image: url('src/img/user.svg');"></div>
+                        <p>Nombre de usuario</p>
+                        <ul>
+                            <li>
+                                <a href="#"><i class="fad fa-user-circle"></i> Ver pérfil</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="far fa-comment-lines"></i> Chat</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fad fa-cog"></i> Configuración</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fad fa-sign-in-alt"></i> Cerrar sesión</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fad fa-door-open"></i> Iniciar sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h3>Buscar</h3>
+                    <div class="buscar">
+                        <form action="" method="post">
+                            <div class="input-buscar">
+                                <i class="fas fa-search"></i>
+                                <input type="search" name="buscar" id="buscar" placeholder="Que deseas buscar?">
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <h3>Explorar</h3>
                 <div class="filtro">
@@ -155,128 +178,7 @@
             <a href="#">
                 <div class="card">
                     <div class="card-head" style="background-image: url('./src/fotos/laptop');">
-                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
-                    </div>
-                    <div class="card-body">
-                        <h2><span>RD$  </span>65,000</h3>
-                        <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card">
-                    <div class="card-head" style="background-image: url('./src/fotos/laptop');">
-                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
-                    </div>
-                    <div class="card-body">
-                        <h2><span>RD$  </span>65,000</h3>
-                        <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card">
-                    <div class="card-head" style="background-image: url('./src/fotos/laptop');">
-                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
-                    </div>
-                    <div class="card-body">
-                        <h2><span>RD$  </span>65,000</h3>
-                        <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card">
-                    <div class="card-head" style="background-image: url('./src/fotos/laptop');">
-                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
-                    </div>
-                    <div class="card-body">
-                        <h2><span>RD$  </span>65,000</h3>
-                        <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card">
-                    <div class="card-head" style="background-image: url('./src/fotos/laptop');">
-                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
-                    </div>
-                    <div class="card-body">
-                        <h2><span>RD$  </span>65,000</h3>
-                        <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card">
-                    <div class="card-head" style="background-image: url('./src/fotos/laptop');">
-                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
-                    </div>
-                    <div class="card-body">
-                        <h2><span>RD$  </span>65,000</h3>
-                        <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card">
-                    <div class="card-head" style="background-image: url('./src/fotos/laptop');">
-                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
-                    </div>
-                    <div class="card-body">
-                        <h2><span>RD$  </span>65,000</h3>
-                        <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card">
-                    <div class="card-head" style="background-image: url('./src/fotos/laptop');">
-                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
-                    </div>
-                    <div class="card-body">
-                        <h2><span>RD$  </span>65,000</h3>
-                        <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card">
-                    <div class="card-head" style="background-image: url('./src/fotos/laptop');">
-                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
-                    </div>
-                    <div class="card-body">
-                        <h2><span>RD$  </span>65,000</h3>
-                        <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card">
-                    <div class="card-head" style="background-image: url('./src/fotos/laptop');">
-                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
-                    </div>
-                    <div class="card-body">
-                        <h2><span>RD$  </span>65,000</h3>
-                        <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card">
-                    <div class="card-head" style="background-image: url('./src/fotos/laptop');">
-                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
-                    </div>
-                    <div class="card-body">
-                        <h2><span>RD$  </span>65,000</h3>
-                        <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="card">
-                    <div class="card-head" style="background-image: url('./src/fotos/laptop');">
-                    <img src="src/img/user.svg" alt="foto del usuario" title="Nombre del usuario">
+                        <div class="img-user" style="background-image: url('src/img/user.svg');"></div>
                     </div>
                     <div class="card-body">
                         <h2><span>RD$  </span>65,000</h3>
