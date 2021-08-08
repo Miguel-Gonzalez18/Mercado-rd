@@ -1,4 +1,11 @@
 <?php
+    include('php/db.php');
+    session_start();
+    if(isset($_SESSION['user'])){
+        $userName=$_SESSION['nombre'];
+        $stmt = $conexion->query("SELECT * FROM usuarios WHERE nombre= '$userName'");
+        $row = $stmt->fetch_assoc();
+      }
     function aside(){
 ?>
 <aside class="menu-main">
@@ -6,8 +13,15 @@
                 <div class="sesion-movil">
                     <h3>Tu cuenta</h3>
                     <div class="cuenta">
+                        <?php
+                            if(isset($_SESSION['user'])){
+                        ?>
+                        <?php if(isset($_SESSION['fotoperfil'])==null){ ?>
                         <div class="img-perfil" style="background-image: url('src/img/user.svg');"></div>
-                        <p>Nombre de usuario</p>
+                        <?php }else{ ?>
+                        <div class="img-perfil" style="background-image: url('src/fotos/<?php echo( $_SESSION['fotoperfil']).'.jpg'; ?>');"></div>
+                        <?php } ?>
+                        <p><?php echo $_SESSION['nombre']?></p>
                         <ul>
                             <li>
                                 <a href="#"><i class="fad fa-user-circle"></i> Ver pérfil</a>
@@ -19,12 +33,12 @@
                                 <a href="#"><i class="fad fa-cog"></i> Configuración</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fad fa-sign-in-alt"></i> Cerrar sesión</a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fad fa-door-open"></i> Iniciar sesión</a>
+                                <a href="php/cerrarsesion.php"><i class="fad fa-sign-in-alt"></i> Cerrar sesión</a>
                             </li>
                         </ul>
+                        <?php } else{ ?>
+                        <a href="login.php?title=Iniciar sesión | Mercado RD"><i class="fad fa-door-open"></i> Iniciar sesión</a>
+                        <?php } ?>
                     </div>
                     <h3>Buscar</h3>
                     <div class="buscar">

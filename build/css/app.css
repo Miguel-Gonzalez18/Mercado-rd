@@ -448,7 +448,7 @@ header .menu-principal {
     margin: auto 0;
     width: 54.5rem;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 }
 header form {
@@ -552,6 +552,9 @@ header .boton-principal:hover {
   color: #17A2B8;
   font-weight: 500;
 }
+.action .dropdown ul li a:hover {
+  color: #0c525d;
+}
 .action .dropdown::before {
   content: "";
   width: 20px;
@@ -592,6 +595,9 @@ header .boton-principal:hover {
 }
 .herramientas .cuenta {
   text-align: center;
+}
+.herramientas .cuenta a {
+  color: #17A2B8;
 }
 .herramientas .cuenta p {
   font-size: 1.3rem;

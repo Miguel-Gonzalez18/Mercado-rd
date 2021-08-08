@@ -36,7 +36,7 @@ header{
             margin: auto 0;
             width: 54.5rem;
             text-align: center;
-            justify-content: space-between;
+            justify-content: space-evenly;
         }
     }
     form{
@@ -133,6 +133,9 @@ header{
                 a{
                     color: $verde;
                     font-weight: 500;
+                    &:hover{
+                        color: darken($verde, 20);
+                    }
                 }
             }
         }

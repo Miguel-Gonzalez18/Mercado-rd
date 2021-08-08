@@ -15,6 +15,9 @@
     height: 100vh;
     .cuenta{
         text-align: center;
+        a{
+            color: $verde;
+        }
         p{
             font-size: 1.3rem;
             margin: .5rem 0;

@@ -1,32 +1,19 @@
 <?php
+    session_start();
+    include('php/db.php');
+    if(isset($_SESSION['user'])){
+        $userName=$_SESSION['nombre'];
+        $stmt = $conexion->query("SELECT * FROM usuarios WHERE nombre= '$userName'");
+        $row = $stmt->fetch_assoc();
+      }
     function cabecera()
     {
 ?>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Entra ya!!! Vende y compra lo que quieras,
-    publica tus productos o servicios en el mercado virtual mas completo y con mejores servicios de la República Dominicana">
-    <meta name="google" content="nositelinkssearchbox" >
-    <meta property="og:locale" content="es_ES">
-    <meta property="og:title" content="Mercado RD">
-    <meta property="og:type" content="store">
-    <meta property="og:description" content="Entra ya!!! Vende y compra lo que quieras,
-    publica tus anuncios o servicios en el mercado virtual mas completo y con mejores servicios de la República Dominicana">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="src/img/logo.png">
-    <meta property="og:site_name" content="Mercado RD">
-    <link rel="stylesheet" href="build/css/app.css">
-    <link rel="shortcut icon" type="image/x-icon" href="src/img/icono.ico">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <title>Mercado RD | ¡Todo lo que necesitas!</title>
-</head>
 <body>
     <header class="header">
         <div class="contenedor">
             <nav class="navegacion">
-                <a href="index.php"><img class="logo" src="src/img/logo.png" alt="logo"></a>
+                <a href="index.php?title=Mercado RD | ¡Todo lo que necesitas!"><img class="logo" src="src/img/logo.png" alt="logo"></a>
                 <div class="menu-desplegable">
                     <i class="fad fa-bars" onclick="menu_activo()"></i>
                 </div>
@@ -42,23 +29,45 @@
                         </div>
                     </form>
                     <div class="botones">
-                        <a href="#" class="boton-principal"><i class="fad fa-door-open"></i> Iniciar</a>
+                        <?php
+                            if(isset($_SESSION['user'])){
+                        ?>
                         <a href="#" class="boton-principal"><i class="fad fa-plus-circle"></i> Publicar</a>
+                        <?php
+                            }else{
+
+                        
+                        ?>
+                        <a href="./login.php?title=Inicia sesión | Mercado RD" class="boton-principal"><i class="fad fa-door-open"></i> Iniciar</a>
+                        <?php
+                        
+                            }
+                        ?>
                     </div>
+                    <?php
+                        if(isset($_SESSION['user'])){
+                    ?>
                     <div class="action">
                         <div class="perfil">
+                            <?php if(isset($_SESSION['fotoperfil'])==null){ ?>
                             <div onclick="dropdown()" class="img" style="background-image: url('src/img/user.svg');"></div>
+                            <?php }else{ ?>
+                            <div onclick="dropdown()" class="img" style="background-image: url('src/fotos/<?php echo( $_SESSION['fotoperfil']).'.jpg'; ?>);"></div>
+                            <?php } ?>
                         </div>
                         <div class="dropdown">
-                            <h3>Miguel Angel</h3>
+                            <h3><?php echo $_SESSION['nombre']?></h3>
                             <ul>
                                 <li><a href="#"><i class="fad fa-user-circle"></i> Mi perfil</a></li>
                                 <li><a href="#"><i class="far fa-comment-lines"></i> Chat</a></li>
                                 <li><a href="#"><i class="fad fa-cog"></i> Configuración</a></li>
-                                <li><a href="#"><i class="fad fa-sign-in-alt"></i> Cerrar sesión</a></li>
+                                <li><a href="php/cerrarsesion.php"><i class="fad fa-sign-in-alt"></i> Cerrar sesión</a></li>
                             </ul>
                         </div>
                     </div>
+                    <?php
+                        }
+                    ?>
                 </div>
             </nav>
         </div>

@@ -1,11 +1,13 @@
 <?php
     include('php/db.php');
+    include('php/head.php');
     include('php/header.php');
     include('php/aside.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
     <?php
+        echo head();
         echo cabecera();
     ?>
     <div class="contenido-principal">
