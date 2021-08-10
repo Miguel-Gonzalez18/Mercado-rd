@@ -45,3 +45,19 @@ h3{
     background: #2874A6;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
   }
+  .boton-principal{
+    display: block;
+    background-color: $azul;
+    color: $blanco;
+    padding: .6rem 1rem;
+    width: 11rem;
+    height: auto;
+    margin: auto 0;
+    border-radius: 5px;
+    font-weight: $regular;
+    &:hover{
+        transition: .7s ease all;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+        background-color: darken($azul, 10);
+    }
+}

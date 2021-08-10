@@ -191,6 +191,9 @@ body::-webkit-scrollbar-thumb
           flex-direction: column;
           text-align: center;
      }
+     .logo img{
+          width: 10rem;
+      }
      .logo {
           font-size: 25px;
           font-weight: 600;

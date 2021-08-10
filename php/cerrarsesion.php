@@ -11,7 +11,7 @@
    { 
     session_destroy();
        //echo "Has cerrado la sesion";
-    echo "<meta content='0;URL=../index.php' http-equiv='REFRESH'> </meta>";
+    echo "<meta content='0;URL=../index.php?title=Mercado RD | ¡Todo lo que necesitas!' http-equiv='REFRESH'> </meta>";
        
    }
  

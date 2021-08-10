@@ -5,7 +5,7 @@
         $userName=$_SESSION['nombre'];
         $stmt = $conexion->query("SELECT * FROM usuarios WHERE nombre= '$userName'");
         $row = $stmt->fetch_assoc();
-      }
+    }
     function aside(){
 ?>
 <aside class="menu-main">
@@ -24,7 +24,7 @@
                         <p><?php echo $_SESSION['nombre']?></p>
                         <ul>
                             <li>
-                                <a href="#"><i class="fad fa-user-circle"></i> Ver pérfil</a>
+                                <a href="perfilUsuario.php?title=<?php echo $_SESSION['nombre']?>"><i class="fad fa-user-circle"></i> Ver pérfil</a>
                             </li>
                             <li>
                                 <a href="#"><i class="far fa-comment-lines"></i> Chat</a>
@@ -94,6 +94,8 @@
                                   <option value="sánchezRamírez">Sánchez Ramírez</option>
                                   <option value="santiago">Santiago</option>
                                   <option value="santoDomingo">Santo Domingo</option>
+                                  <option value="santoDomingoOeste">Santo Domingo Oeste</option>
+                                  <option value="santoDomingoEste">Santo Domingo Este</option>
                                   <option value="valverde">Valverde</option>
                                 </select>
                               </form>

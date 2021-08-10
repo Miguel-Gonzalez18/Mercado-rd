@@ -1,0 +1,114 @@
+.contenido-usuario{
+    @include telefono{
+        padding: 0;
+    }
+    @include tablet{
+        padding: 1rem;
+        display: flex;
+    }
+    .informacion-perfil{
+        @include telefono{
+            z-index: 1;
+            transition: .5s ease all;
+            position: fixed;
+            left: -100%;
+            width: 100vw;
+            height: 100vh;
+            overflow: scroll;
+        }
+        @include tablet{
+            position: relative;
+            overflow: hidden;
+            left: 0;
+            margin-top: .5rem;
+            min-width: 20rem;
+            max-width: 25rem;
+        }
+        @include desktop{
+            margin-top: .5rem;
+            min-width: 25rem;
+            max-width: 30rem;
+        }
+        width: 25rem;
+        background-color: darken($blanco, 3);
+        text-align: justify;
+        .foto-perfil{
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            border: 2px solid $rojo;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 1rem auto;
+        }
+        h3{
+            margin-top: 1rem;
+            font-weight: 400;
+            padding: 1rem;
+            background-color: darken($blanco, 7);
+        }
+        p{
+            display: block;
+            text-align: center;
+            color: $azul;
+            font-weight: 500;
+            font-size: 1.5rem;
+        }
+        ul{
+            width: 65%;
+            list-style: none;
+            display: block;
+            margin: 1.5rem auto;
+            li{
+                i{
+                    color: $azul;
+                    margin: 0 auto;
+                }
+                font-family: $fuente_principal;
+                font-weight: 400;
+                padding: 1rem 0;
+                font-size: 1.2rem;
+                .boton{
+                    i{
+                        color: $blanco;
+                    }
+                    text-align: center;
+                }
+                a{
+                    margin: 1rem auto;
+                }
+            }
+        }
+    }
+    .informacion-perfil.activo{
+        position: fixed;
+        left: 0%;
+    }
+}
+.btn-cerrarsesion{
+    @include telefono{
+        display: block;
+    }
+    @include tablet{
+        display: none;
+    }
+    background-color: $rojo;
+}
+.anuncios-usuario{
+    .h3anuncios{
+        padding: 1rem;
+        background-color: darken($blanco, 7);
+        font-weight: 500;
+    }
+    margin: 0 auto;
+    background-color: darken($blanco, 3);
+}
+.contenedor{
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+    @include telefono{
+        margin: 0;
+    }
+}

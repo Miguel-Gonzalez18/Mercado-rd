@@ -5,7 +5,7 @@ window.addEventListener('scroll', function(){
 function menu_activo() {
     let menu = document.querySelector(".menu-main");
     menu.classList.toggle("activo");
-    let menutoggle = document.querySelector(".menutoggle");
+    
 }
 function dropdown(){
     let activo = document.querySelector('.dropdown');

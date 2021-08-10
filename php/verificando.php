@@ -30,7 +30,7 @@ if( $counthash==1){
      $_SESSION['cedula'] = $row['cedula'];
      $_SESSION['telefono'] = $row['telefono'];
      $_SESSION['direccion'] = $row['direccion']; 
-   header("location: ../index.php");
+   header("location: ../index.php?title=Mercado RD | ¡Todo lo que necesitas!");
         
     }
     else
