@@ -23,6 +23,7 @@
             margin-top: .5rem;
             min-width: 20rem;
             max-width: 25rem;
+            height: auto;
         }
         @include desktop{
             margin-top: .5rem;
@@ -33,14 +34,20 @@
         background-color: darken($blanco, 3);
         text-align: justify;
         .foto-perfil{
-            width: 8rem;
-            height: 8rem;
             border-radius: 50%;
             border: 2px solid $rojo;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             margin: 1rem auto;
+            @include telefono{
+                width: 6rem;
+                height: 6rem;
+            }
+            @include tablet{
+                width: 8rem;
+                height: 8rem;
+            }
         }
         h3{
             margin-top: 1rem;
@@ -53,9 +60,14 @@
             text-align: center;
             color: $azul;
             font-weight: 500;
-            font-size: 1.5rem;
+            @include telefono{
+                font-size: 1.2rem;
+            }
+            @include tablet{
+                font-size: 1.5rem;
+            }
         }
-        ul{
+        ul.lista-informacion{
             width: 65%;
             list-style: none;
             display: block;
@@ -68,7 +80,12 @@
                 font-family: $fuente_principal;
                 font-weight: 400;
                 padding: 1rem 0;
-                font-size: 1.2rem;
+                @include telefono{
+                    font-size: 1rem;
+                }
+                @include tablet{
+                    font-size: 1.2rem;
+                }
                 .boton{
                     i{
                         color: $blanco;
@@ -77,6 +94,9 @@
                 }
                 a{
                     margin: 1rem auto;
+                    @include telefono{
+                        font-size: 1rem;
+                    }
                 }
             }
         }
@@ -110,5 +130,78 @@
     margin: 0 auto;
     @include telefono{
         margin: 0;
+    }
+}
+.lista-filtros{
+    width: 90%;
+    list-style: none;
+    display: block;
+    margin: 1.5rem auto;
+
+    li{
+        padding: 1rem 0;
+        color: $azul;
+        font-weight: 400;
+        font-size: 1.2rem;
+        a{
+            color: $azul;
+            font-weight: 400;
+            @include telefono{
+                font-size: 1rem;
+            }
+            @include tablet{
+                font-size: 1.2rem;
+            }
+        }
+    }
+    form{
+        display: grid;
+        label{
+            margin: 1rem 0;
+            @include telefono{
+                font-size: 1rem;
+            }
+            @include tablet{
+                font-size: 1.2rem;
+            }
+        }
+        select{
+            color: $negro;
+            border: 3px solid $azul;
+            border-radius: 3rem;
+            padding: .3rem;
+            background-color: $blanco;
+            @include telefono{
+                font-size: 1rem;
+            }
+            @include tablet{
+                font-size: 1.2rem;
+            }
+            &:focus{
+                outline: none;
+                border: 3px solid $azul;
+            }
+        }
+    }
+}
+.categorias-perfil{
+    padding: 1rem;
+    margin-bottom: 6rem;
+    ul{
+        list-style: none;
+        li{
+            padding: 1rem;
+            a{
+                color: $azul;
+                font-weight: 400;
+                font-size: 1.2rem;
+                @include telefono{
+                 font-size: 1rem;   
+                }
+                @include tablet{
+                    font-size: 1.2rem;
+                }
+            }
+        }
     }
 }

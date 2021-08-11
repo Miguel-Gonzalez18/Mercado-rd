@@ -61,3 +61,65 @@ h3{
         background-color: darken($azul, 10);
     }
 }
+footer{
+    .footer{
+        margin-top: 1rem;
+        width: 100%;
+        background-color: darken($blanco, 5);
+        @include telefono{
+            display: block;
+            padding: 1rem;
+        }
+        @include tablet{
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+        }
+        a{
+            color: $azul;
+            padding: .5rem;
+            text-align: center;
+            @include telefono{
+                font-size: 2rem;
+            }
+            @include tablet{
+                font-size: 2.3rem;
+            }
+        }
+        h3{
+            margin-bottom: 1rem;
+            font-weight: 500;
+            @include telefono{
+                font-size: 1.1rem;
+            }
+            @include tablet{
+                font-size: 1.3rem;
+            }
+        }
+        ul{
+            list-style: none;
+            li{
+                padding: .6rem;
+                a{
+                    color: darken($blanco, 70);
+                    font-weight: 400;
+                    &:hover{
+                        color: $negro;
+                    }
+                    @include telefono{
+                        font-size: 1rem
+                    }
+                    @include tablet{
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+        .redes-sociales{
+            margin: 1rem;
+        }
+        .otros-enlaces{
+            margin: 1rem;
+        }
+    }
+}

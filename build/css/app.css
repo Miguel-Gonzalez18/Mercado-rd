@@ -418,6 +418,83 @@ h3 {
   background-color: #166dba;
 }
 
+footer .footer {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+@media (min-width: 0px) {
+  footer .footer {
+    display: block;
+    padding: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  footer .footer {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+}
+footer .footer a {
+  color: #1E88E5;
+  padding: 0.5rem;
+  text-align: center;
+}
+@media (min-width: 0px) {
+  footer .footer a {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  footer .footer a {
+    font-size: 2.3rem;
+  }
+}
+footer .footer h3 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+@media (min-width: 0px) {
+  footer .footer h3 {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 768px) {
+  footer .footer h3 {
+    font-size: 1.3rem;
+  }
+}
+footer .footer ul {
+  list-style: none;
+}
+footer .footer ul li {
+  padding: 0.6rem;
+}
+footer .footer ul li a {
+  color: #4d4d4d;
+  font-weight: 400;
+}
+footer .footer ul li a:hover {
+  color: #000;
+}
+@media (min-width: 0px) {
+  footer .footer ul li a {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  footer .footer ul li a {
+    font-size: 1.2rem;
+  }
+}
+footer .footer .redes-sociales {
+  margin: 1rem;
+}
+footer .footer .otros-enlaces {
+  margin: 1rem;
+}
+
 header {
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
   padding: 0.1rem 0;
@@ -655,6 +732,7 @@ header .boton-principal:hover {
 }
 .herramientas .small {
   font-size: 1rem;
+  margin-bottom: 6rem;
 }
 .herramientas h3 {
   margin: 1.5rem 0;
@@ -850,6 +928,7 @@ aside {
     margin-top: 0.5rem;
     min-width: 20rem;
     max-width: 25rem;
+    height: auto;
   }
 }
 @media (min-width: 1500px) {
@@ -860,14 +939,24 @@ aside {
   }
 }
 .contenido-usuario .informacion-perfil .foto-perfil {
-  width: 8rem;
-  height: 8rem;
   border-radius: 50%;
   border: 2px solid #C0392B;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 1rem auto;
+}
+@media (min-width: 0px) {
+  .contenido-usuario .informacion-perfil .foto-perfil {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media (min-width: 768px) {
+  .contenido-usuario .informacion-perfil .foto-perfil {
+    width: 8rem;
+    height: 8rem;
+  }
 }
 .contenido-usuario .informacion-perfil h3 {
   margin-top: 1rem;
@@ -880,32 +969,55 @@ aside {
   text-align: center;
   color: #1E88E5;
   font-weight: 500;
-  font-size: 1.5rem;
 }
-.contenido-usuario .informacion-perfil ul {
+@media (min-width: 0px) {
+  .contenido-usuario .informacion-perfil p {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 768px) {
+  .contenido-usuario .informacion-perfil p {
+    font-size: 1.5rem;
+  }
+}
+.contenido-usuario .informacion-perfil ul.lista-informacion {
   width: 65%;
   list-style: none;
   display: block;
   margin: 1.5rem auto;
 }
-.contenido-usuario .informacion-perfil ul li {
+.contenido-usuario .informacion-perfil ul.lista-informacion li {
   font-family: "Exo", sans-serif;
   font-weight: 400;
   padding: 1rem 0;
-  font-size: 1.2rem;
 }
-.contenido-usuario .informacion-perfil ul li i {
+.contenido-usuario .informacion-perfil ul.lista-informacion li i {
   color: #1E88E5;
   margin: 0 auto;
 }
-.contenido-usuario .informacion-perfil ul li .boton {
+@media (min-width: 0px) {
+  .contenido-usuario .informacion-perfil ul.lista-informacion li {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .contenido-usuario .informacion-perfil ul.lista-informacion li {
+    font-size: 1.2rem;
+  }
+}
+.contenido-usuario .informacion-perfil ul.lista-informacion li .boton {
   text-align: center;
 }
-.contenido-usuario .informacion-perfil ul li .boton i {
+.contenido-usuario .informacion-perfil ul.lista-informacion li .boton i {
   color: #fff;
 }
-.contenido-usuario .informacion-perfil ul li a {
+.contenido-usuario .informacion-perfil ul.lista-informacion li a {
   margin: 1rem auto;
+}
+@media (min-width: 0px) {
+  .contenido-usuario .informacion-perfil ul.lista-informacion li a {
+    font-size: 1rem;
+  }
 }
 .contenido-usuario .informacion-perfil.activo {
   position: fixed;
@@ -944,5 +1056,95 @@ aside {
 @media (min-width: 0px) {
   .contenedor {
     margin: 0;
+  }
+}
+
+.lista-filtros {
+  width: 90%;
+  list-style: none;
+  display: block;
+  margin: 1.5rem auto;
+}
+.lista-filtros li {
+  padding: 1rem 0;
+  color: #1E88E5;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.lista-filtros li a {
+  color: #1E88E5;
+  font-weight: 400;
+}
+@media (min-width: 0px) {
+  .lista-filtros li a {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .lista-filtros li a {
+    font-size: 1.2rem;
+  }
+}
+.lista-filtros form {
+  display: grid;
+}
+.lista-filtros form label {
+  margin: 1rem 0;
+}
+@media (min-width: 0px) {
+  .lista-filtros form label {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .lista-filtros form label {
+    font-size: 1.2rem;
+  }
+}
+.lista-filtros form select {
+  color: #000;
+  border: 3px solid #1E88E5;
+  border-radius: 3rem;
+  padding: 0.3rem;
+  background-color: #fff;
+}
+@media (min-width: 0px) {
+  .lista-filtros form select {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .lista-filtros form select {
+    font-size: 1.2rem;
+  }
+}
+.lista-filtros form select:focus {
+  outline: none;
+  border: 3px solid #1E88E5;
+}
+
+.categorias-perfil {
+  padding: 1rem;
+  margin-bottom: 6rem;
+}
+.categorias-perfil ul {
+  list-style: none;
+}
+.categorias-perfil ul li {
+  padding: 1rem;
+}
+.categorias-perfil ul li a {
+  color: #1E88E5;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+@media (min-width: 0px) {
+  .categorias-perfil ul li a {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .categorias-perfil ul li a {
+    font-size: 1.2rem;
   }
 }

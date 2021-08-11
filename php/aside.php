@@ -124,8 +124,11 @@
                     <a href="#"><i class="fab fa-youtube"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
+                <h3><a href="#" style="text-decoration: underline;">Términos y condiciones</a></h3>
+                <h3><a href="#" style="text-decoration: underline;">Contactenos</a></h3>
                 <h3 class="small">© 2021 Mercado RD. Todos los derechos reservados.</h3>
                 <h3></h3>
+
             </div>
         </aside>
 <?php
