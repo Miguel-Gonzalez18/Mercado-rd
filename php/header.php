@@ -32,7 +32,7 @@
                         <?php
                             if(isset($_SESSION['user'])){
                         ?>
-                        <a href="#" class="boton-principal"><i class="fad fa-plus-circle"></i> Publicar</a>
+                        <a href="./publicarAnuncio.php?title=Publicar" class="boton-principal"><i class="fad fa-plus-circle"></i> Publicar</a>
                         <?php
                             }else{
 

@@ -114,13 +114,13 @@ form.addEventListener('click', function(e) {
         }
     }
     function validarAccount2() {
-        var direccion = document.getElementById('dire')
+        var direccion = document.getElementById('provincias')
         var cedula = document.getElementById('cedula')
         var correo = document.getElementById('correo')
       
 
-        if(direccion.value.trim()==""){
-            document.getElementById('dire').classList.add('validartext')
+        if(direccion.value=="0" || direccion.value.trim==""){
+            document.getElementById('provincias').classList.add('validartext')
             document.getElementById('cedula').classList.remove('validartext')
             document.getElementById('correo').classList.remove('validartext')
             
@@ -128,24 +128,24 @@ form.addEventListener('click', function(e) {
         else if(cedula.value.trim()=="")
         {
             document.getElementById('cedula').classList.add('validartext')
-            document.getElementById('dire').classList.remove('validartext')
+            document.getElementById('provincias').classList.remove('validartext')
             document.getElementById('correo').classList.remove('validartext')
         }
         else if(correo.value.trim()==""){
             document.getElementById('correo').classList.add('validartext')
-            document.getElementById('dire').classList.remove('validartext')
+            document.getElementById('provincias').classList.remove('validartext')
             document.getElementById('cedula').classList.remove('validartext')
         }
         else if(!document.querySelector('input[name="sexo"]:checked'))
         {
             document.getElementById('correo').classList.remove('validartext')
-            document.getElementById('dire').classList.remove('validartext')
+            document.getElementById('provincias').classList.remove('validartext')
             document.getElementById('cedula').classList.remove('validartext')
         }
         else
         {
             document.getElementById('correo').classList.remove('validartext')
-            document.getElementById('dire').classList.remove('validartext')
+            document.getElementById('provincias').classList.remove('validartext')
             document.getElementById('cedula').classList.remove('validartext')
             pasos()
         }

@@ -1,0 +1,201 @@
+.form-publicar{
+    @include telefono{
+        width: 95%;
+        margin: 0 auto;
+    }
+    @include tablet{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .titulo{
+        @include telefono{
+            width: 13rem;
+            margin: 2rem 0;
+        }
+        @include tablet{
+            width: 13rem;
+            margin: 3rem 0;
+        }
+        h3{
+            @include telefono{
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: $azul;
+                border-bottom: 2px solid $azul;
+            }
+            @include tablet{
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: $azul;
+                border-bottom: 2px solid $azul;
+            }
+        }
+    }
+    .group-input{
+        @include telefono{
+            display: block;
+            width: 95%;
+            margin: 2rem auto;
+        }
+        @include tablet{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            margin: 3rem 0;
+        }
+        
+        .input{
+            @include telefono{
+                width: 100%;
+                font-size: 1rem;
+
+            }
+            @include tablet{
+                width: 40%;
+                font-size: 1.2rem;
+            }
+
+            label{
+                @include telefono{
+                    display: block;
+                    margin: 1rem 0;
+                }
+                @include tablet{
+                    display: block;
+                    margin: .5rem 0;
+                }
+            }
+            input{
+                width: 100%;
+            }
+            select{
+                width: 100%;
+            }
+
+        }
+    }
+    .textAreas{
+        @include telefono{
+            width: 95%;
+            margin: 0 auto;
+        }
+        @include tablet{
+            width: 85%;
+            margin: 0 auto;
+        }
+        label{
+            @include telefono{
+                display: block;
+                margin: .5rem;
+                font-size: 1rem;
+            }
+            @include tablet{
+                display: block;
+                margin: .5rem;
+                font-size: 1.2rem;
+            }
+        }
+        textarea{
+            width: 100%;
+            color: $negro;
+            border: 2px solid $azul;
+            border-radius: 1rem;
+            padding: .3rem;
+            background-color: $blanco;
+            &:focus{
+            outline: none;
+            border: 3px solid $azul;
+            }
+        }
+    }
+}
+.group-radio{
+    width: 100%;
+    .radio{
+        width: 90%;
+        margin: 0 auto;
+        label{
+            color: $azul;
+            padding: 5px 15px 5px 51px;
+            display: inline-block;
+            position: relative;
+            font-size:  1.3rem;
+            border-radius: 3px;
+            cursor: pointer;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            &:hover{
+                background-color: #81b0da;
+            }
+            &::before{
+                content: "";
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                background: none;
+                border: 3px solid $azul;
+                border-radius: 50%;
+                position: absolute;
+                left: 20px;
+                top: 5px;
+            }
+        }
+        input[type=radio]{
+            display: none;
+        }
+        input[type="radio"]:checked + label
+        {
+            padding: 5px 15px;
+            background-color: $azul;
+            color: white;
+            border-radius: 2px;
+        }
+        input[type="radio"]:checked + label:before
+        {
+            display: none;
+        }
+    }
+    
+}
+.selectfile{
+    margin-top: 2rem;
+    text-align: center;
+    label{
+        transition: 1s ease all;
+        background-color: $verde;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 10px;
+        width: 50%;
+        text-align: center;
+        &:hover{
+            transition: 1s ease all;
+            background-color: darken($verde, 10);
+        }
+    }
+    input[type=file]{
+        display: none;
+    }
+    .listFile{
+        text-align: center;
+        padding: 25px;
+        img{
+            width: 20%;
+        }
+        ul{
+            li{
+                display: inline;
+                list-style: none;
+                margin: 5px;
+            }
+        }
+    }
+}
+.btn-publicar{
+    margin-top: 2rem;
+    width: 12rem;
+    text-align: center;
+    margin: 0 auto;
+}

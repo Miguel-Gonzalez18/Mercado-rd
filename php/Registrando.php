@@ -68,13 +68,14 @@ else if($_POST['pass']== $_POST['pass2']){
  $query = "INSERT INTO usuarios (username,nombre,apellido,mail,fecha_nac,genero,cedula,telefono,
  direccion,password) VALUES ('$_POST[user]', '$_POST[nombre]' , '$_POST[apellido]' ,
            '$_POST[correo]' , '$_POST[fechanac]' ,'$_POST[sexo]','$_POST[cedula]' , '$_POST[telefono]' ,
-           '$_POST[dire]' ,'$pass_cifrado')";
+           '$_POST[provincias]' ,'$pass_cifrado')";
 }
  if ($conexion->query($query) === TRUE) {
  
  echo "<br />" . "<h2>" . "Usuario Creado Exitosamente!" . "</h2>";
  echo "<h4>" . "Bienvenido: " . $_POST['user'] . "</h4>" . "\n\n";
- echo "<h5>" . "Volver a la pagina " . "<a href='index.php'>principal</a>" . "</h5>"; 
+ echo "<h5>" . "Volver a la pagina " . "<a href='../index.php'>principal</a>" . "</h5>"; 
+ header("location: ../index.php?title=Mercado RD | ¡Todo lo que necesitas!");
  }
 
  else {

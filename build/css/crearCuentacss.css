@@ -188,6 +188,7 @@ body::-webkit-scrollbar-thumb
      margin-bottom: 10px;
      border-radius: 3px;
      border: 1px solid #17A2B8;
+     background-color: white;
  }
  /* step botones */
 .step__button {

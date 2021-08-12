@@ -61,6 +61,28 @@ h3{
         background-color: darken($azul, 10);
     }
 }
+input{
+    color: $negro;
+    border: 3px solid $azul;
+    border-radius: 3rem;
+    padding: .3rem;
+    background-color: $blanco;
+    &:focus{
+    outline: none;
+    border: 3px solid $azul;
+    }
+}
+select{
+    color: $negro;
+    border: 3px solid $azul;
+    border-radius: 3rem;
+    padding: .3rem;
+    background-color: $blanco;
+    &:focus{
+    outline: none;
+    border: 3px solid $azul;
+    }
+}
 footer{
     .footer{
         margin-top: 1rem;
@@ -121,5 +143,32 @@ footer{
         .otros-enlaces{
             margin: 1rem;
         }
+    }
+}
+a.flotante{
+    @include telefono{
+        text-align: center;
+        z-index: 5;
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+        background-color: $azul;
+        color: $blanco;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.2);
+        &:hover{
+            transition: .7s ease all;
+            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+            background-color: darken($azul, 10);
+        }
+        i{
+            line-height: 56px;
+            font-size: 2rem;
+        }
+    }
+    @include tablet{
+        display: none;
     }
 }

@@ -48,7 +48,41 @@
                                         <h2 class="step__title">Información Personal</h2>
                                    </div>
                                    <div class="step__body">
-                                        <input type="text" placeholder="Dirección" class="step__input" id="dire" name="dire">
+                                        <select name="provincias" id="provincias" class="step__input">
+                                        <option value="0" selected>De donde eres?</option>
+                                        <option value="Azua">Azua</option>
+                                        <option value="Bahoruco">Bahoruco</option>
+                                        <option value="Barahona">Barahona</option>
+                                        <option value="Dajabón">Dajabón</option>
+                                        <option value="Distrito Nacional">Distrito Nacional</option>
+                                        <option value="Duarte">Duarte</option>
+                                        <option value="Elías Piña">Elías Piña</option>
+                                        <option value="El Seibo">El Seibo</option>
+                                        <option value="Espaillat">Espaillat</option>
+                                        <option value="Hato Mayor">Hato Mayor</option>
+                                        <option value="Hermanas Mirabal">Hermanas Mirabal</option>
+                                        <option value="Independencia">Independencia</option>
+                                        <option value="La Altagracia">La Altagracia</option>
+                                        <option value="La Romana">La Romana</option>
+                                        <option value="La Vega">La Vega</option>
+                                        <option value="María Trinidad Sánchez">María Trinidad Sánchez</option>
+                                        <option value="Monseñor Nouel">Monseñor Nouel</option>
+                                        <option value="Monte Cristi">Monte Cristi</option>
+                                        <option value="Monte Plata">Monte Plata</option>
+                                        <option value="Pedernales">Pedernales</option>
+                                        <option value="Peravia">Peravia</option>
+                                        <option value="Puerto Plata">Puerto Plata</option>
+                                        <option value="Samaná">Samaná</option>
+                                        <option value="San Cristóbal">San Cristóbal</option>
+                                        <option value="San JosédeOcoa">San José de Ocoa</option>
+                                        <option value="San Juan">San Juan</option>
+                                        <option value="San Pedro de Macorís">San Pedro de Macorís</option>
+                                        <option value="Sánchez Ramírez">Sánchez Ramírez</option>
+                                        <option value="Santiago">Santiago</option>
+                                        <option value="Santo Domingo Oeste">Santo Domingo Oeste</option>
+                                        <option value="Santo Domingo Este">Santo Domingo Este</option>
+                                        <option value="Valverde">Valverde</option>
+                                        </select>
                                         <input type="number" placeholder="Cédula" class="step__input" id="cedula" name="cedula">
                                         <input type="text" placeholder="Correo" class="step__input" id="correo" name="correo">
                                         <div class="radio">

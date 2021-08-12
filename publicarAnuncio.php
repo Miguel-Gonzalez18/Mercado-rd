@@ -1,0 +1,83 @@
+<?php
+    include('php/db.php');
+    include('php/head.php');
+    include('php/header.php');
+    include('php/footer');
+    session_start();
+?>
+<!DOCTYPE html>
+<html lang="es">
+<?php
+    echo head();
+?>
+<?php
+    echo cabecera();
+?>
+<body>
+    <div class="form-publicar">
+        <div class="titulo">
+            <h3>Publicar anuncio</h3>
+        </div>
+        <form action="" method="post">
+            <div class="group-input">
+                <div class="input">
+                    <label for="nombreAnuncio">Título del anuncio</label>
+                    <input type="text" name="nombre" id="nombreAnuncio">
+                </div>
+                <div class="input">
+                    <label for="precioAnuncio">Precio</label>
+                    <input type="number" name="precio" id="precioAnuncio">
+                </div>
+            </div>
+            <div class="textAreas">
+                <label for="descripcionAnuncio">Descripción del anuncio</label>
+                <textarea name="descripcion" id="descripcionAnuncio" cols="30" rows="10"></textarea>
+            </div>
+            <div class="group-input">
+                <div class="input">
+                    <label for="categoriaAnuncio">¿A qué categoría pertenece?</label>
+                    <select name="categoria" id="categoriaAnuncio">
+                        <option value="0" selected>seleccione</option>
+                        <option value="1">Bebes y niños</option>
+                        <option value="2">Computadoras y accesorios</option>
+                        <option value="3">Deporte</option>
+                        <option value="4">Electronica</option>
+                        <option value="5">Hogar</option>
+                        <option value="6">Inmuebles en venta/alquiler</option>
+                        <option value="7">Moda y belleza</option>
+                        <option value="8">Telefonos</option>
+                        <option value="9">Vehiculos</option>
+                        <option value="10">Otros</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label for="marcaAnuncio">Marca(Opcional)</label>
+                    <input type="text" name="marca" id="marcaAnuncio">
+                </div>
+            </div>
+            <div class="group-radio">
+                <div class="radio">
+                  <input type="radio" name="estado" value="1" id="male">
+                  <label for="male">Nuevo</label>
+                  <input type="radio" name="estado" value="0" id="female">
+                  <label for="female">Usado</label>
+                </div>
+            </div>
+            <div class="selectfile">
+                <label for="exampleFormControlFile1" class="labelFile"><i class="fas fa-images"></i> Selecciona las imagenes</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="foto[]" accept="image/*"  multiple onchange="handleFiles(this.files)">
+                <div class="listFile" id="fileList">
+                </div>
+            </div>
+            <div class="btn-publicar">
+                <a href="#"class="boton-principal"><i class="fad fa-plus-circle"></i> Publicar</a>
+            </div>
+        </form>
+    </div>
+    <?php
+        echo footer();
+    ?>
+    <script src="src/js/selectFile.js"></script>
+    <script src="src/js/app.js"></script>
+</body>
+</html>

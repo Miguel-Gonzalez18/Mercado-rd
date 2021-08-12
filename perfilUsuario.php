@@ -63,7 +63,7 @@
                                   <option value="bahoruco">Bahoruco</option>
                                   <option value="barahona">Barahona</option>
                                   <option value="dajabón">Dajabón</option>
-                                  <option value="distritoNacional">Distrito Nacional</option>
+                                  <option value="distrito Nacional">Distrito Nacional</option>
                                   <option value="duarte">Duarte</option>
                                   <option value="elíasPiña">Elías Piña</option>
                                   <option value="elSeibo">El Seibo</option>
@@ -88,7 +88,6 @@
                                   <option value="sanPedrodeMacorís">San Pedro de Macorís</option>
                                   <option value="sánchezRamírez">Sánchez Ramírez</option>
                                   <option value="santiago">Santiago</option>
-                                  <option value="santoDomingo">Santo Domingo</option>
                                   <option value="santoDomingoOeste">Santo Domingo Oeste</option>
                                   <option value="santoDomingoEste">Santo Domingo Este</option>
                                   <option value="valverde">Valverde</option>
