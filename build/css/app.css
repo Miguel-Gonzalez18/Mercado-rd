@@ -420,24 +420,74 @@ h3 {
 
 input {
   color: #000;
-  border: 3px solid #1E88E5;
+  border: 2px solid #1E88E5;
   border-radius: 3rem;
   padding: 0.3rem;
   background-color: #fff;
 }
 input:focus {
   outline: none;
-  border: 3px solid #1E88E5;
+  border: 2px solid #1E88E5;
 }
 
 select {
   color: #000;
-  border: 3px solid #1E88E5;
+  border: 2px solid #1E88E5;
   border-radius: 3rem;
   padding: 0.3rem;
   background-color: #fff;
 }
 select:focus {
+  outline: none;
+  border: 2px solid #1E88E5;
+}
+
+textarea {
+  width: 100%;
+  color: #000;
+  border: 2px solid #1E88E5;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  background-color: #fff;
+}
+textarea:focus {
+  outline: none;
+  border: 3px solid #1E88E5;
+}
+
+.textareaerror {
+  width: 100%;
+  color: #000;
+  border: 2px solid #C0392B;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  background-color: #fff;
+}
+.textareaerror:focus {
+  outline: none;
+  border: 3px solid #1E88E5;
+}
+
+.selectError {
+  color: #000;
+  border: 3px solid #C0392B;
+  border-radius: 3rem;
+  padding: 0.3rem;
+  background-color: #fff;
+}
+.selectError:focus {
+  outline: none;
+  border: 3px solid #1E88E5;
+}
+
+.errorInput {
+  color: #000;
+  border: 3px solid #C0392B;
+  border-radius: 3rem;
+  padding: 0.3rem;
+  background-color: #fff;
+}
+.errorInput:focus {
   outline: none;
   border: 3px solid #1E88E5;
 }
@@ -1314,18 +1364,6 @@ aside {
     font-size: 1.2rem;
   }
 }
-.form-publicar .textAreas textarea {
-  width: 100%;
-  color: #000;
-  border: 2px solid #1E88E5;
-  border-radius: 1rem;
-  padding: 0.3rem;
-  background-color: #fff;
-}
-.form-publicar .textAreas textarea:focus {
-  outline: none;
-  border: 3px solid #1E88E5;
-}
 
 .group-radio {
   width: 100%;
@@ -1356,6 +1394,33 @@ aside {
   display: inline-block;
   background: none;
   border: 3px solid #1E88E5;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  top: 5px;
+}
+.group-radio .radio .radioerror {
+  color: #C0392B;
+  padding: 5px 15px 5px 51px;
+  display: inline-block;
+  position: relative;
+  font-size: 1.3rem;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.group-radio .radio .radioerror:hover {
+  background-color: #da8181;
+}
+.group-radio .radio .radioerror::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: none;
+  border: 3px solid #C0392B;
   border-radius: 50%;
   position: absolute;
   left: 20px;
@@ -1399,11 +1464,31 @@ aside {
   text-align: center;
   padding: 25px;
 }
-.selectfile .listFile img {
-  width: 20%;
+@media (min-width: 0px) {
+  .selectfile .listFile img {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .selectfile .listFile img {
+    width: 80%;
+  }
+}
+@media (min-width: 0px) {
+  .selectfile .listFile ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .selectfile .listFile ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
 }
 .selectfile .listFile ul li {
-  display: inline;
   list-style: none;
   margin: 5px;
 }
@@ -1413,4 +1498,8 @@ aside {
   width: 12rem;
   text-align: center;
   margin: 0 auto;
+}
+.btn-publicar button {
+  border: none;
+  cursor: pointer;
 }

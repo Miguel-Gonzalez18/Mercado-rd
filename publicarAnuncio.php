@@ -2,7 +2,8 @@
     include('php/db.php');
     include('php/head.php');
     include('php/header.php');
-    include('php/footer');
+    include('php/footer.php');
+    @include('php/aside.php');
     session_start();
 ?>
 <!DOCTYPE html>
@@ -14,24 +15,25 @@
     echo cabecera();
 ?>
 <body>
+<script src="src/js/selectFile.js"></script>
     <div class="form-publicar">
         <div class="titulo">
             <h3>Publicar anuncio</h3>
         </div>
-        <form action="" method="post">
+        <form action="" method="post" class="form-publicar">
             <div class="group-input">
                 <div class="input">
                     <label for="nombreAnuncio">Título del anuncio</label>
-                    <input type="text" name="nombre" id="nombreAnuncio">
+                    <input type="text" name="nombre" id="nombreAnuncio" required placeholder="Ej: Vendo MacBook Air">
                 </div>
                 <div class="input">
                     <label for="precioAnuncio">Precio</label>
-                    <input type="number" name="precio" id="precioAnuncio">
+                    <input type="number" name="precio" id="precioAnuncio" placeholder="Ej: RD 60,000">
                 </div>
             </div>
             <div class="textAreas">
                 <label for="descripcionAnuncio">Descripción del anuncio</label>
-                <textarea name="descripcion" id="descripcionAnuncio" cols="30" rows="10"></textarea>
+                <textarea class="error" name="descripcion" id="descripcionAnuncio" cols="30" rows="10" placeholder="Describe lo que vendes"></textarea>
             </div>
             <div class="group-input">
                 <div class="input">
@@ -57,27 +59,27 @@
             </div>
             <div class="group-radio">
                 <div class="radio">
-                  <input type="radio" name="estado" value="1" id="male">
-                  <label for="male">Nuevo</label>
-                  <input type="radio" name="estado" value="0" id="female">
-                  <label for="female">Usado</label>
+                  <input type="radio" name="estado" value="1" id="nuevo">
+                  <label id="labelnuevo" for="nuevo">Nuevo</label>
+                  <input type="radio" name="estado" value="0" id="usado">
+                  <label id="labelusado" for="usado">Usado</label>
                 </div>
             </div>
             <div class="selectfile">
                 <label for="exampleFormControlFile1" class="labelFile"><i class="fas fa-images"></i> Selecciona las imagenes</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="foto[]" accept="image/*"  multiple onchange="handleFiles(this.files)">
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="foto[]" accept="image/*" multiple onchange="handleFiles(this.files)">
                 <div class="listFile" id="fileList">
                 </div>
             </div>
             <div class="btn-publicar">
-                <a href="#"class="boton-principal"><i class="fad fa-plus-circle"></i> Publicar</a>
+                <button type="submit" class="boton-principal"><i class="fad fa-plus-circle"></i> Publicar</button>
             </div>
         </form>
     </div>
     <?php
         echo footer();
     ?>
-    <script src="src/js/selectFile.js"></script>
+    <script src="src/js/validarFormPublicar.js"></script>
     <script src="src/js/app.js"></script>
 </body>
 </html>

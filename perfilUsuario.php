@@ -132,7 +132,13 @@
             }
         ?>
     </div>
-
+        <?php
+            if(isset($_SESSION['user'])){
+        ?>
+        <a href="./publicarAnuncio.php?title=Publicar" class="flotante"><i class="fad fa-plus-circle"></i></a>
+        <?php
+            } 
+        ?>
     <?php
         echo footer();
     ?>

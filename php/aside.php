@@ -128,16 +128,15 @@
                 <h3><a href="#" style="text-decoration: underline;">Contactenos</a></h3>
                 <h3 class="small">© 2021 Mercado RD. Todos los derechos reservados.</h3>
                 <h3></h3>
-
+                <?php
+                    if(isset($_SESSION['user'])){
+                ?>
+                <a href="./publicarAnuncio.php?title=Publicar" class="flotante"><i class="fad fa-plus-circle"></i></a>
+                <?php
+                    } 
+                ?>
             </div>
         </aside>
-        <?php
-            if(isset($_SESSION['user'])){
-        ?>
-        <a href="./publicarAnuncio.php?title=Publicar" class="flotante"><i class="fad fa-plus-circle"></i></a>
-        <?php
-            } 
-        ?>
 <?php
     }
 ?>

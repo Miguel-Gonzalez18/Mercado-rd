@@ -63,18 +63,53 @@ h3{
 }
 input{
     color: $negro;
-    border: 3px solid $azul;
+    border: 2px solid $azul;
     border-radius: 3rem;
     padding: .3rem;
     background-color: $blanco;
     &:focus{
     outline: none;
-    border: 3px solid $azul;
+    border: 2px solid $azul;
     }
 }
 select{
     color: $negro;
+    border: 2px solid $azul;
+    border-radius: 3rem;
+    padding: .3rem;
+    background-color: $blanco;
+    &:focus{
+    outline: none;
+    border: 2px solid $azul;
+    }
+}
+textarea{
+    width: 100%;
+    color: $negro;
+    border: 2px solid $azul;
+    border-radius: 1rem;
+    padding: .3rem;
+    background-color: $blanco;
+    &:focus{
+    outline: none;
     border: 3px solid $azul;
+    }
+}
+.textareaerror{
+    width: 100%;
+    color: $negro;
+    border: 2px solid $rojo;
+    border-radius: 1rem;
+    padding: .3rem;
+    background-color: $blanco;
+    &:focus{
+    outline: none;
+    border: 3px solid $azul;
+    }
+}
+.selectError{
+    color: $negro;
+    border: 3px solid $rojo;
     border-radius: 3rem;
     padding: .3rem;
     background-color: $blanco;
@@ -83,6 +118,18 @@ select{
     border: 3px solid $azul;
     }
 }
+.errorInput{
+    color: $negro;
+    border: 3px solid $rojo;
+    border-radius: 3rem;
+    padding: .3rem;
+    background-color: $blanco;
+    &:focus{
+    outline: none;
+    border: 3px solid $azul;
+    }
+}
+
 footer{
     .footer{
         margin-top: 1rem;
