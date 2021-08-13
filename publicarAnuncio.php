@@ -47,7 +47,7 @@
                         <option value="5">Hogar</option>
                         <option value="6">Inmuebles en venta/alquiler</option>
                         <option value="7">Moda y belleza</option>
-                        <option value="8">Telefonos</option>
+                        <option value="8">Celulares y accesorios</option>
                         <option value="9">Vehiculos</option>
                         <option value="10">Otros</option>
                     </select>

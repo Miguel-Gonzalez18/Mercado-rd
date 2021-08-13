@@ -2,7 +2,7 @@
     include('php/db.php');
     include('php/head.php');
     include('php/header.php');
-    @include('php/footer.php');
+    include('php/footer.php');
     session_start();
     if(isset($_SESSION['user'])){
         $userName=$_SESSION['nombre'];
