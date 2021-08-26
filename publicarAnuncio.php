@@ -21,11 +21,11 @@
         </div>
         <form action="" method="post" class="formulario-publicar">
             <div class="group-input">
-                <div class="input">
+                <div class="input nombreInput">
                     <label for="nombreAnuncio">Título del anuncio</label>
-                    <input type="text" name="nombre" id="nombreAnuncio" required placeholder="Ej: Vendo MacBook Air">
+                    <input type="text" name="nombre" id="nombreAnuncio" required placeholder="Ej: Vendo MacBook Air" autocomplete="off">
                 </div>
-                <div class="input">
+                <div class="input precioInput">
                     <label for="precioAnuncio">Precio</label>
                     <input type="number" name="precio" id="precioAnuncio" placeholder="Ej: RD 60,000">
                 </div>

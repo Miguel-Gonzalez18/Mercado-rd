@@ -31,6 +31,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
         function leerDatos(e){
             datos[e.target.id] = e.target.value;
             console.log(datos);
+            const alertaPrevia = document.querySelector('.alertaDiv')
+            if(alertaPrevia){
+                return;
+            }
+            //creando una alerta
+            if(e.target.value.length < 15){
+                alerta(`<i class="fad fa-frown"></i> El título es muy corto`, "advertencia");
+            }
+            if(e.target.value.length > 15){
+                alerta(`<i class="fad fa-grin-wink"></i> Correcto!!`, "correcto");
+            }
         }
         function leerCondicio(e){
             datos["condicionAnuncio"] = e.target.value;
@@ -41,7 +52,37 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
 
         //validar que los datos no esten vacios
+        document.querySelector('.formulario-publicar').addEventListener('submit', e =>{
+            
+        });
         return;
     }
 
 });
+function alerta(mensaje, tipo){
+    let nombreClase ='';
+    if(tipo === "advertencia"){
+        nombreClase = "advertencia";
+    }
+    if(tipo === "correcto"){
+        nombreClase = "correcto";
+    }
+    if(tipo === "error"){
+        nombreClase = "error";
+    }
+    const contenedorAlerta = document.querySelector('.nombreInput');
+    const alertaDiv = document.createElement('DIV');
+
+    alertaDiv.classList.add('alertaDiv');
+    contenedorAlerta.appendChild(alertaDiv);
+
+    const alerta = document.createElement('P');
+    alerta.classList.add(nombreClase);
+    alerta.innerHTML = mensaje;
+    alertaDiv.appendChild(alerta);
+
+    setTimeout(()=>{
+        alertaDiv.remove();
+    }, 3000)
+    
+}

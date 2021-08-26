@@ -5,6 +5,7 @@ const concat = require('gulp-concat');
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
+const notify = require('gulp-notify');
 //Utilidades Js
 const terser = require('gulp-terser-js');
 const rename = require('gulp-rename');
