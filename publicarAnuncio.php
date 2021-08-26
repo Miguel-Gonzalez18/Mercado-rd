@@ -30,12 +30,12 @@
                     <input type="number" name="precio" id="precioAnuncio" placeholder="Ej: RD 60,000">
                 </div>
             </div>
-            <div class="textAreas">
+            <div class="textAreas descripcionInput">
                 <label for="descripcionAnuncio">Descripción del anuncio</label>
-                <textarea class="error" name="descripcion" id="descripcionAnuncio" cols="30" rows="10" placeholder="Describe lo que vendes"></textarea>
+                <textarea name="descripcion" id="descripcionAnuncio" cols="30" rows="10" placeholder="Describe lo que vendes"></textarea>
             </div>
             <div class="group-input">
-                <div class="input">
+                <div class="input categoriaInput">
                     <label for="categoriaAnuncio">¿A qué categoría pertenece?</label>
                     <select name="categoria" id="categoriaAnuncio">
                         <option value="0" selected>seleccione</option>

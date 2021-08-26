@@ -30,18 +30,32 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         function leerDatos(e){
             datos[e.target.id] = e.target.value;
-            console.log(datos);
+            console.log(datos)
+            const elemnetPadre = e.target.parentElement;
+            let contenedorInput = '';
             const alertaPrevia = document.querySelector('.alertaDiv')
             if(alertaPrevia){
                 return;
             }
-            //creando una alerta
-            if(e.target.value.length < 15){
-                alerta(`<i class="fad fa-frown"></i> El título es muy corto`, "advertencia");
+
+            if(elemnetPadre.classList.contains('nombreInput')){
+                contenedorInput = '.nombreInput';
+                if(e.target.value.length < 15){
+                    alerta(`<i class="fad fa-frown"></i> El título es muy corto`, "advertencia", contenedorInput);
+                }
+                if(e.target.value.length > 20){
+                    alerta(`<i class="fad fa-grin-wink"></i> Correcto!!`, "correcto", contenedorInput);
+                }
+            }else if(elemnetPadre.classList.contains('descripcionInput')){
+                contenedorInput = '.descripcionInput';
+                if(e.target.value.length < 50){
+                    alerta(`<i class="fad fa-frown"></i> Una descripción muy corta, describe con más detalles lo que vendes`, "advertencia", contenedorInput);
+                }
+                if(e.target.value.length > 100){
+                    alerta(`<i class="fad fa-grin-wink"></i> Ahora esta mejor!!, recuerda mientras mejor detallas lo que vendes mas facíl sera encontrarlo`, "correcto", contenedorInput);
+                }
             }
-            if(e.target.value.length > 15){
-                alerta(`<i class="fad fa-grin-wink"></i> Correcto!!`, "correcto");
-            }
+            
         }
         function leerCondicio(e){
             datos["condicionAnuncio"] = e.target.value;
@@ -59,7 +73,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 
 });
-function alerta(mensaje, tipo){
+function alerta(mensaje, tipo, contenedor){
     let nombreClase ='';
     if(tipo === "advertencia"){
         nombreClase = "advertencia";
@@ -70,7 +84,7 @@ function alerta(mensaje, tipo){
     if(tipo === "error"){
         nombreClase = "error";
     }
-    const contenedorAlerta = document.querySelector('.nombreInput');
+    const contenedorAlerta = document.querySelector(contenedor);
     const alertaDiv = document.createElement('DIV');
 
     alertaDiv.classList.add('alertaDiv');

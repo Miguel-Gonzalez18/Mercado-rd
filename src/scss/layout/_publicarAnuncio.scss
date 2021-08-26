@@ -233,20 +233,18 @@
         cursor: pointer;
     }
 }
-.nombreInput{
-    .advertencia{
-        font-size: 1rem;
-        color: $naranja;
-        padding: .5rem;
-    }
-    .correcto{
-        font-size: 1rem;
-        color: $verde;
-        padding: .5rem;
-    }
-    .error{
-        font-size: 1rem;
-        color: $rojo;
-        padding: .5rem;
-    }
+.advertencia{
+    font-size: 1rem;
+    color: $naranja;
+    padding: .5rem;
+}
+.correcto{
+    font-size: 1rem;
+    color: $verde;
+    padding: .5rem;
+}
+.error{
+    font-size: 1rem;
+    color: $rojo;
+    padding: .5rem;
 }
