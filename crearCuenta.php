@@ -5,7 +5,6 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>Crear Cuenta</title>
-     <script src="src/js/formularioLogin.js"></script>
      <link rel="shortcut icon" type="image/x-icon" href="img/20200710_192627.ico">
      <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="build/css/crearCuentacss.css">
@@ -19,7 +18,7 @@
           </header>
           <main>
                <div class="root">
-               <form action="php/Registrando.php" class="form-register" id="formulario_crear" name="formulario_registro"  method="POST">
+               <form action="php/Registrando.php" class="form-register" id="formulario_crear" name="formulario_registro"  method="POST" onclick="formularioValidar();">
                          <div class="form-register__header">
                          <h3 class="form-register__title">Crear Cuenta</h3>
                               <ul class="progressbar">
@@ -125,6 +124,6 @@
                </div>
           </main>
      </div>
-     <script src="src/js/app.js"></script>
+     <script src="build/js/bundle.js"></script>
 </body>
 </html>

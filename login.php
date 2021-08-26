@@ -11,7 +11,7 @@
      <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="build/css/logincss.css">
      <link rel="shortcut icon" type="image/x-icon" href="src/img/icono.ico">
-     <script src="src/js/validarLogin.js"></script>
+     <script src="build/js/bundle"></script>
 </head>
 <body>
 <div class="contenedor">
@@ -59,6 +59,6 @@
           </main>
      </div>
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-     <script src="src/js/main.js"></script>
+     <script src="build/js/min.js"></script>
 </body>
 </html>

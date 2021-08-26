@@ -1,5 +1,4 @@
-window.onload = function()
-{
+document.addEventListener('DOMContentLoaded', ()=>{
     let formularioL = document.getElementById('formulario_login')
     if (formularioL) {
         formularioL.addEventListener('submit', validaciónLogin, false)
@@ -7,7 +6,7 @@ window.onload = function()
     else{
         console.log('No existe el formulario')
     }
-}
+});
 function validaciónLogin(evObject)
 {
     let username = document.getElementById('user')

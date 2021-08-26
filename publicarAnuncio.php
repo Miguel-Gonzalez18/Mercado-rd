@@ -15,12 +15,11 @@
     echo cabecera();
 ?>
 <body>
-<script src="src/js/selectFile.js"></script>
     <div class="form-publicar">
         <div class="titulo">
             <h3>Publicar anuncio</h3>
         </div>
-        <form action="" method="post" class="form-publicar">
+        <form action="" method="post" class="formulario-publicar">
             <div class="group-input">
                 <div class="input">
                     <label for="nombreAnuncio">Título del anuncio</label>
@@ -79,7 +78,6 @@
     <?php
         echo footer();
     ?>
-    <script src="src/js/validarFormPublicar.js"></script>
-    <script src="src/js/app.js"></script>
+    <script src="build/js/bundle.js"></script>
 </body>
 </html>
