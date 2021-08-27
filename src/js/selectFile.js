@@ -1,9 +1,8 @@
 function handleFiles(files)
 {
     var listImg = document.getElementById('fileList');
-    if (!files.length) {
-        listImg.innerHTML = "<p>No files selected!</p>";
-        evObject.preventDefault()
+    if (!files.length) { 
+        return;
     }
     else
     {

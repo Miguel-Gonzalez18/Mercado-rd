@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             precioAnuncio: '',
             descripcionAnuncio: '',
             categoriaAnuncio: '',
-            marcaAnuncio: '',
             condicionAnuncio: '',
             fotosAnuncio: ''
         }
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const precioA = document.querySelector('#precioAnuncio');
         const descripcionA = document.querySelector('#descripcionAnuncio');
         const categoriaA = document.querySelector('#categoriaAnuncio');
-        const marcaA = document.querySelector('#marcaAnuncio');
         const nuevoA = document.querySelector('#nuevo');
         const usadoA = document.querySelector('#usado');
         const file = document.querySelector('#exampleFormControlFile1');
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         precioA.addEventListener('input', leerDatos);
         descripcionA.addEventListener('input', leerDatos);
         categoriaA.addEventListener('input', leerDatos);
-        marcaA.addEventListener('input', leerDatos);
         nuevoA.addEventListener('input', leerCondicio);
         usadoA.addEventListener('input', leerCondicio);
         file.addEventListener('input', leerFotos);
@@ -30,7 +27,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         function leerDatos(e){
             datos[e.target.id] = e.target.value;
-            console.log(datos)
             const elemnetPadre = e.target.parentElement;
             let contenedorInput = '';
             const alertaPrevia = document.querySelector('.alertaDiv')
@@ -55,24 +51,52 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     alerta(`<i class="fad fa-grin-wink"></i> Ahora esta mejor!!, recuerda mientras mejor detallas lo que vendes mas facíl sera encontrarlo`, "correcto", contenedorInput);
                 }
             }
-            
         }
         function leerCondicio(e){
             datos["condicionAnuncio"] = e.target.value;
-            console.log(datos);
         }
         function leerFotos(e){
+            if(e.target.files.length >= 10){
+                e.target.value = '';
+                alerta('<i class="fad fa-frown"></i> Debes seleccionar minimo 10 fotos', 'error', '.selectfile');
+                return;
+            }
             datos["fotosAnuncio"] = e.target.files.length;
         }
 
         //validar que los datos no esten vacios
         document.querySelector('.formulario-publicar').addEventListener('submit', e =>{
-            
+            const {nombreAnuncio, precioAnuncio, descripcionAnuncio, categoriaAnuncio, condicionAnuncio, fotosAnuncio} = datos;
+            if(nombreAnuncio.trim() === ''){
+                alerta('<i class="fad fa-frown"></i> Debe ingresar el título del anuncio, este dato es obligatorio', 'error', '.nombreInput');
+                e.preventDefault();
+            }
+            else if(precioAnuncio.trim() === ''){
+                alerta('<i class="fad fa-frown"></i> Debe ingresar el precio del anuncio, este dato es obligatorio', 'error', '.precioInput');
+                e.preventDefault();
+            }
+            else if(descripcionAnuncio.trim() === ''){
+                alerta('<i class="fad fa-frown"></i> Debe describir lo que vende, este dato es obligatorio', 'error', '.descripcionInput');
+                e.preventDefault();
+            }
+            else if(categoriaAnuncio.trim() === ''){
+                alerta('<i class="fad fa-frown"></i> Elija una categoría, este dato es obligatorio', 'error', '.categoriaInput');
+                e.preventDefault();
+            }
+            else if(condicionAnuncio.trim() === ''){
+                alerta('<i class="fad fa-frown"></i> Seleccione la condición del artículo, este dato es obligatorio', 'error', '.radio');
+                e.preventDefault();
+            }
+            else if(fotosAnuncio.trim() === ''){
+                alerta('<i class="fad fa-frown"></i> Debe seleccionar minimo 10 fotos, este dato es obligatorio', 'error', '.selectfile');
+                e.preventDefault();
+            }
         });
         return;
     }
 
 });
+
 function alerta(mensaje, tipo, contenedor){
     let nombreClase ='';
     if(tipo === "advertencia"){
@@ -97,6 +121,6 @@ function alerta(mensaje, tipo, contenedor){
 
     setTimeout(()=>{
         alertaDiv.remove();
-    }, 3000)
+    }, 5000)
     
 }

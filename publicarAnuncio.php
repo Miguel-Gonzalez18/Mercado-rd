@@ -23,7 +23,7 @@
             <div class="group-input">
                 <div class="input nombreInput">
                     <label for="nombreAnuncio">Título del anuncio</label>
-                    <input type="text" name="nombre" id="nombreAnuncio" required placeholder="Ej: Vendo MacBook Air" autocomplete="off">
+                    <input type="text" name="nombre" id="nombreAnuncio" placeholder="Ej: Vendo MacBook Air" autocomplete="off">
                 </div>
                 <div class="input precioInput">
                     <label for="precioAnuncio">Precio</label>
