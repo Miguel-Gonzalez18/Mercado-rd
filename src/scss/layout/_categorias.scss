@@ -117,21 +117,16 @@ aside{
         position: fixed;
         left: -100%;
         width: 100vw;
-        height: 100vh;
         overflow: scroll;
     }
     @include tablet{
         position: relative;
-        overflow: hidden;
         left: 0;
+        overflow: inherit;
         margin-top: .5rem;
         min-width: 20rem;
-        max-width: 25rem;
-    }
-    @include desktop{
-        margin-top: .5rem;
-        min-width: 25rem;
-        max-width: 27rem;
+        max-width: 20rem;
+        height: auto;
     }
 }
 .activo{

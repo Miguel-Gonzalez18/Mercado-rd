@@ -26,7 +26,7 @@ header{
     .logo{
         width: 9rem;
         @include tablet{
-            width: 13.5rem;
+            width: 10.5rem;
         }
     }
     .menu-principal{
@@ -46,7 +46,7 @@ header{
         display: block;
         background-color: $azul;
         color: $blanco;
-        padding: .6rem 1rem;
+        padding: .5rem 1rem;
         width: 10rem;
         height: auto;
         margin: auto 0;
@@ -63,7 +63,6 @@ header{
     color: $azul;
     border: 3px solid $azul;
     border-radius: 3rem;
-    padding: .3rem;
     width: 23rem;
     input{
         width: 90%;
@@ -84,7 +83,7 @@ header{
         display: block;
         color: $azul;
         margin: .3rem 0;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         cursor: pointer;
     }
 }
