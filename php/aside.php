@@ -17,9 +17,9 @@
                             if(isset($_SESSION['user'])){
                         ?>
                         <?php if(isset($_SESSION['fotoperfil'])==null){ ?>
-                        <div class="img-perfil" style="background-image: url('src/img/user.svg');"></div>
+                        <div class="img-perfil" style="background-image: url('build/img/user.svg');"></div>
                         <?php }else{ ?>
-                        <div class="img-perfil" style="background-image: url('src/fotos/<?php echo( $_SESSION['fotoperfil']).'.jpg'; ?>');"></div>
+                        <div class="img-perfil" style="background-image: url('build/fotos/<?php echo( $_SESSION['fotoperfil']).'.jpg'; ?>');"></div>
                         <?php } ?>
                         <p><?php echo $_SESSION['nombre']?></p>
                         <ul>

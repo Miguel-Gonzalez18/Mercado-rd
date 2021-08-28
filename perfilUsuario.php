@@ -29,10 +29,10 @@
                 if(isset($_SESSION['fotoperfil'])==null){
 
             ?>
-            <div class="foto-perfil" style="background-image: url('src/img/user.svg');">
+            <div class="foto-perfil" style="background-image: url('build/img/user.svg');">
             </div>
             <?php } else{?>
-                <div class="foto-perfil" style="background-image: url('src/fotos/<?php echo( $_SESSION['fotoperfil']).'.jpg'; ?>');">
+                <div class="foto-perfil" style="background-image: url('build/fotos/<?php echo( $_SESSION['fotoperfil']).'.jpg'; ?>');">
                 </div>
             <?php }?>
             <p><?php echo $_SESSION['nombre']?></p>
@@ -41,7 +41,7 @@
                 <li><i class="fas fa-map-marker-alt"></i> <?php echo $row['direccion']?></li>
                 <li><i class="fas fa-phone-square-alt"></i> <?php echo $row['telefono']?></li>
                 <li>
-                    <a href="#" class="boton boton-principal"><i class="fas fa-edit"></i> Editar perfil</a>
+                    <a href="editarUsuario.php?title=Editar tu información" class="boton boton-principal"><i class="fas fa-edit"></i> Editar perfil</a>
                     <a href="php/cerrarsesion.php" class="boton boton-principal btn-cerrarsesion"><i class="fad fa-sign-in-alt"></i> Cerrar sesión</a>
                 </li>
             </ul>
@@ -118,7 +118,7 @@
                 <a href="#">
                     <div class="card">
                         <div class="card-head" style="background-image: url('build/fotos/laptop');">
-                            <div class="img-user" style="background-image: url('src/img/user.svg');"></div>
+                            <div class="img-user" style="background-image: url('build/img/user.svg');"></div>
                         </div>
                         <div class="card-body">
                             <h2><span>RD$  </span>65,000</h3>

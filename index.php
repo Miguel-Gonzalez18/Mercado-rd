@@ -19,10 +19,10 @@
     <meta property="og:description" content="Entra ya!!! Vende y compra lo que quieras,
     publica tus anuncios o servicios en el mercado virtual mas completo y con mejores servicios de la República Dominicana">
     <meta property="og:url" content="">
-    <meta property="og:image" content="src/img/logo.png">
+    <meta property="og:image" content="build/img/logo.png">
     <meta property="og:site_name" content="Mercado RD">
     <link rel="stylesheet" href="build/css/app.css">
-    <link rel="shortcut icon" type="image/x-icon" href="src/img/icono.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="build/img/icono.ico">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Mercado RD | ¡Todo lo que necesitas!</title>
 </head>
@@ -37,7 +37,7 @@
             <a href="#">
                 <div class="card">
                     <div class="card-head" style="background-image: url('build/fotos/laptop');">
-                        <div class="img-user" style="background-image: url('src/img/user.svg');"></div>
+                        <div class="img-user" style="background-image: url('build/img/user.svg');"></div>
                     </div>
                     <div class="card-body">
                         <h2><span>RD$  </span>65,000</h3>

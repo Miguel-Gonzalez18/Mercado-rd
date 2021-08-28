@@ -13,7 +13,7 @@
     <header class="header">
         <div class="contenedor">
             <nav class="navegacion">
-                <a href="index.php?title=Mercado RD | ¡Todo lo que necesitas!"><img class="logo" src="src/img/logo.png" alt="logo"></a>
+                <a href="index.php?title=Mercado RD | ¡Todo lo que necesitas!"><img class="logo" src="build/img/logo.png" alt="logo"></a>
                 <div class="menu-desplegable">
                     <i class="fad fa-bars" onclick="menu_activo()"></i>
                 </div>
@@ -50,9 +50,9 @@
                     <div class="action">
                         <div class="perfil">
                             <?php if(isset($_SESSION['fotoperfil'])==null){ ?>
-                            <div onclick="dropdown()" class="img" style="background-image: url('src/img/user.svg');"></div>
+                            <div onclick="dropdown()" class="img" style="background-image: url('build/img/user.svg');"></div>
                             <?php }else{ ?>
-                            <div onclick="dropdown()" class="img" style="background-image: url('src/fotos/<?php echo( $_SESSION['fotoperfil']).'.jpg'; ?>);"></div>
+                            <div onclick="dropdown()" class="img" style="background-image: url('build/fotos/<?php echo( $_SESSION['fotoperfil']).'.jpg'; ?>);"></div>
                             <?php } ?>
                         </div>
                         <div class="dropdown">

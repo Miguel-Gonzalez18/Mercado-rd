@@ -5,15 +5,15 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>Crear Cuenta</title>
-     <link rel="shortcut icon" type="image/x-icon" href="img/20200710_192627.ico">
      <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+     <link rel="shortcut icon" type="image/x-icon" href="build/img/icono.ico">
      <link rel="stylesheet" href="build/css/crearCuentacss.css">
 </head>
 <body>
      <div class="contenedor">
           <header>
                <a href="index.php" class="logo">
-                    <img src="src/img/logo.png" alt="logo">
+                    <img src="build/img/logo.png" alt="logo">
                </a>
           </header>
           <main>
@@ -119,7 +119,7 @@
                     </form>
                </div>
                <div class="contenedor-img">
-                    <img src="src/img/undraw_profile_6l1l.svg" alt="">
+                    <img src="build/img/undraw_profile_6l1l.svg" alt="">
                     <p class="mensaje">Crea una cuenta para comprar y vender en Mercado RD</p>
                </div>
           </main>

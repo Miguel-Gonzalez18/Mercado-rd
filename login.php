@@ -10,14 +10,14 @@
      <title><?php echo $_GET['title']?></title>
      <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="build/css/logincss.css">
-     <link rel="shortcut icon" type="image/x-icon" href="src/img/icono.ico">
+     <link rel="shortcut icon" type="image/x-icon" href="build/img/icono.ico">
      <script src="build/js/bundle"></script>
 </head>
 <body>
 <div class="contenedor">
           <header>
                <a href="index.php" class="logo">
-                    <img src="src/img/logo.png" alt="logo">
+                    <img src="build/img/logo.png" alt="logo">
                </a>
           </header>
           <main>
@@ -52,7 +52,7 @@
                     </div>
                </div>
                <div class="contenedor-img">
-                    <img src="src/img/undraw_add_to_cart_vkjp.svg" alt="">
+                    <img src="build/img/undraw_add_to_cart_vkjp.svg" alt="">
                     <h3 class="titulo">Mercado RD es la tienda virtual con<br>todo lo que necesitas para <span class="typed"></span></h3>
                </div>
                

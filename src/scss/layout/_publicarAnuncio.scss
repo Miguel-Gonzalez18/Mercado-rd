@@ -24,7 +24,7 @@
                 border-bottom: 2px solid $azul;
             }
             @include tablet{
-                font-size: 1.6rem;
+                font-size: 1.3rem;
                 font-weight: 500;
                 color: $azul;
                 border-bottom: 2px solid $azul;
@@ -47,15 +47,14 @@
         .input{
             @include telefono{
                 width: 100%;
-                font-size: 1rem;
 
             }
             @include tablet{
                 width: 40%;
-                font-size: 1.2rem;
             }
 
             label{
+                color: darken($verde, 15);
                 @include telefono{
                     display: block;
                     margin: 1rem 0;
@@ -88,11 +87,6 @@
                 display: block;
                 margin: .5rem;
                 font-size: 1rem;
-            }
-            @include tablet{
-                display: block;
-                margin: .5rem;
-                font-size: 1.2rem;
             }
         }
     }

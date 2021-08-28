@@ -62,22 +62,30 @@ h3{
     }
 }
 input{
-    color: $negro;
-    border: 2px solid $azul;
-    border-radius: 3rem;
-    padding: .3rem;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
     background-color: $blanco;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
     &:focus{
     outline: none;
     border: 2px solid $azul;
     }
 }
 select{
-    color: $negro;
-    border: 2px solid $azul;
-    border-radius: 3rem;
-    padding: .3rem;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
     background-color: $blanco;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
     &:focus{
     outline: none;
     border: 2px solid $azul;
@@ -85,14 +93,18 @@ select{
 }
 textarea{
     width: 100%;
-    color: $negro;
-    border: 2px solid $azul;
-    border-radius: 1rem;
-    padding: .3rem;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
     background-color: $blanco;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
     &:focus{
     outline: none;
-    border: 3px solid $azul;
+    border: 2px solid $azul;
     }
 }
 .textareaerror{

@@ -1,0 +1,135 @@
+.informacion{
+    @include telefono{
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 2rem;
+    }
+    @include tablet{
+        width: 70%;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+}
+.img-cuenta{
+    border: 2px inset $verde;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    label{
+        position: absolute;
+        bottom: -15px;
+        right: -10px;
+        text-align: center;
+        padding: 12px;
+        width: 3rem;
+        height: 3rem;
+        background-color: $verde;
+        color: $blanco;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.5rem;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+}
+.control-file{
+    display: none;
+}
+.grupo-campo{
+    @include telefono{
+        display: block;
+    }
+    @include tablet{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+    .campo{
+        width: 100%;
+        label{
+            display: block;
+            color: darken($verde, 15);
+            padding: 1rem 0;
+        }
+        input{
+            width: 100%;
+        }
+        select{
+            width: 100%;
+        }
+    }
+}
+.radioCampo{
+    width: 90%;
+    margin: 0 auto;
+    label.labelRadio{
+        color: $verde;
+        padding: 5px 15px 5px 51px;
+        display: inline-block;
+        position: relative;
+        border-radius: 3px;
+        cursor: pointer;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        margin-top: 3rem;
+        &:hover{
+            background-color: lighten($verde, 50);
+        }
+        &::before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background: none;
+            border: 3px solid $verde;
+            border-radius: 50%;
+            position: absolute;
+            left: 20px;
+            top: 5px;
+        }
+    }
+    input[type=radio]{
+        display: none;
+    }
+    input[type="radio"]:checked + label
+    {
+        padding: 5px 15px;
+        background-color: darken($verde, 10);
+        color: white;
+        border-radius: 2px;
+    }
+    input[type="radio"]:checked + label:before
+    {
+        display: none;
+    }
+}
+.titulo h3{
+    font-size: 1.3rem;
+    color: darken($azul, 15);
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.btn{
+    margin-top: 5rem;
+    button{
+        width: 10rem;
+        padding: .5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: $verde;
+        color: $blanco;
+        &:hover{
+            cursor: pointer;
+            background-color: darken($verde, 10);
+            box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+        }
+    }
+}

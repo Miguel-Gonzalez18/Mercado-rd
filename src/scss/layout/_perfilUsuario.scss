@@ -25,11 +25,6 @@
             max-width: 25rem;
             height: auto;
         }
-        @include desktop{
-            margin-top: .5rem;
-            min-width: 25rem;
-            max-width: 30rem;
-        }
         width: 25rem;
         background-color: darken($blanco, 3);
         text-align: justify;
