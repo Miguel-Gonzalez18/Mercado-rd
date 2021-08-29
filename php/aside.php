@@ -27,6 +27,9 @@
                                 <a href="perfilUsuario.php?title=<?php echo $_SESSION['nombre']?>"><i class="fad fa-user-circle"></i> Ver pérfil</a>
                             </li>
                             <li>
+                                <a href="editarUsuario.php"><i class="fad fa-user-edit"></i> Editar tu perfil</a>
+                            </li>
+                            <li>
                                 <a href="#"><i class="far fa-comment-lines"></i> Chat</a>
                             </li>
                             <li>

@@ -207,7 +207,7 @@ footer{
 a.flotante{
     @include telefono{
         text-align: center;
-        z-index: 5;
+        z-index: 10;
         position: fixed;
         right: 2rem;
         bottom: 2rem;

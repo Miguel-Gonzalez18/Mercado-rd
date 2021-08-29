@@ -85,9 +85,9 @@
                                         <input type="number" placeholder="Cédula" class="step__input" id="cedula" name="cedula">
                                         <input type="text" placeholder="Correo" class="step__input" id="correo" name="correo">
                                         <div class="radio">
-                                             <input type="radio" name="sexo" id="hombre" value="M">
+                                             <input type="radio" name="sexo" id="hombre" value="Hombre">
                                              <label for="hombre">Hombre</label>
-                                             <input type="radio" name="sexo" id="mujer" value="F">
+                                             <input type="radio" name="sexo" id="mujer" value="Mujer">
                                              <label for="mujer">Mujer</label>
                                         </div>
                                    </div>

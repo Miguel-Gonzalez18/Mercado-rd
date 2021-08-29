@@ -58,8 +58,9 @@
                         <div class="dropdown">
                             <h3><?php echo $_SESSION['nombre']?></h3>
                             <ul>
-                                <li><a href="perfilUsuario.php?title=<?php echo $_SESSION['nombre']?>"><i class="fad fa-user-circle"></i> Mi perfil</a></li>
+                                <li><a href="perfilUsuario.php?title=<?php echo $_SESSION['nombre']?>"><i class="fad fa-user-circle"></i> Mis anuncios</a></li>
                                 <li><a href="#"><i class="far fa-comment-lines"></i> Chat</a></li>
+                                <li><a href="editarUsuario.php"><i class="fad fa-user-edit"></i> Editar tu perfil</a></li>
                                 <li><a href="#"><i class="fad fa-cog"></i> Configuración</a></li>
                                 <li><a href="php/cerrarsesion.php"><i class="fad fa-sign-in-alt"></i> Cerrar sesión</a></li>
                             </ul>
