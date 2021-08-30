@@ -132,13 +132,19 @@ document.addEventListener('DOMContentLoaded', e =>{
                 e.preventDefault();
             }
             if(cedula.value){
-                if(validarCedula(cedula.value))
+                if(validarCedula(cedula.value)===true)
                 {
 
                 }
                 else{
                     e.preventDefault();
+                    console.log('hay un problema con la cedula')
                 }
+            }
+            if(cedula.value.trim()===''){
+                contenedorInput = '.cedula';
+                e.preventDefault();
+                alerta(`<i class="fad fa-times"></i> Debe colocar su cédula, este dato es obligatorio`, 'error', contenedorInput);
             }
             if(hombre.checked || mujer.checked){
             }else{
@@ -148,8 +154,7 @@ document.addEventListener('DOMContentLoaded', e =>{
         });
         //Funcion paara validar la cédula
         function validarCedula(cedulaCompleta){
-            if( cedulaCompleta.length >= 11){
-                let contenedorInput = '';
+            if( cedulaCompleta.length === 11){
                 const cedula = cedulaCompleta.substring(0,10);
                 const digitoVerificador = cedulaCompleta.substring(10, 11);
                 const ultimoDigito = parseInt(digitoVerificador);
@@ -174,7 +179,13 @@ document.addEventListener('DOMContentLoaded', e =>{
                 }else{
                     let contenedorInput = '.cedula';
                     alerta(`<i class="fad fa-times"></i> La cédula está incorrecta o no existe, intentelo de nuevo`, 'error', contenedorInput);
+                    return false;
                 }
+            }
+            else{
+                let contenedorInput = '.cedula';
+                alerta(`<i class="fad fa-times"></i> La cédula debe de ser de 11 digitos`, 'error', contenedorInput);
+                return false;
             }
 
         }
