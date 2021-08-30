@@ -52,7 +52,7 @@
                             <?php if(isset($_SESSION['fotoperfil'])==null){ ?>
                             <div onclick="dropdown()" class="img" style="background-image: url('build/img/user.svg');"></div>
                             <?php }else{ ?>
-                            <div onclick="dropdown()" class="img" style="background-image: url('build/fotos/<?php echo( $_SESSION['fotoperfil']).'.jpg'; ?>);"></div>
+                            <div onclick="dropdown()" class="img" style="background-image: url('build/fotos/<?php echo( $_SESSION['fotoperfil']).'.jpg'; ?>')"></div>
                             <?php } ?>
                         </div>
                         <div class="dropdown">

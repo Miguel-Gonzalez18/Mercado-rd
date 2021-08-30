@@ -1,5 +1,5 @@
 <?php
-$host_db = "localhost";
+  $host_db = "localhost";
  $user_db = "root";
  $pass_db = "root1234";
  $db_name = "santodomingordventas";

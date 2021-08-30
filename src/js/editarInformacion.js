@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', e =>{
         //Creamos una funcion para leer lo que escribe el usuario
         function leerDatos(e){
             datos[e.target.id] = e.target.value;
-            console.log(datos);
             const elementoPadre = e.target.parentElement;
             let contenedorInput = '';
             
@@ -78,11 +77,11 @@ document.addEventListener('DOMContentLoaded', e =>{
                 return;
             }
 
-            //verificamos la cedula
+            //Verificamos la cedula
             if(elementoPadre.classList.contains('cedula')){
                 if(e.target.value.length > 11){
                     contenedorInput = '.cedula';
-                    alerta(`<i class="fad fa-frown"></i> Esto no es una cédula valida`, 'advertencia', contenedorInput);
+                    alerta(`<i class="fad fa-frown"></i> La cédula no puede tener mas de 11 digitos`, 'advertencia', contenedorInput);
                 }
                 return;
             }
@@ -99,9 +98,84 @@ document.addEventListener('DOMContentLoaded', e =>{
                 return;
             }
         }
+        document.querySelector('.formulario-informacion').addEventListener('submit', e =>{
+            //extraemos los datos del objeto
+            contenedorInput = '';
+            if(nombre.value.trim()===''){
+                contenedorInput = '.nombre';
+                alerta(`<i class="fad fa-times"></i> No puede dejar el nombre vacío`, 'error', contenedorInput);
+                e.preventDefault();
+                return;
+            }
+            if(apellido.value.trim()===''){
+                contenedorInput = '.apellido';
+                alerta(`<i class="fad fa-times"></i> No puede dejar el apellido vacío`, 'error', contenedorInput);
+                e.preventDefault();
+                return;
+            }
+            if(email.value.trim()===''){
+                contenedorInput = '.email';
+                alerta(`<i class="fad fa-times"></i> No puede dejar el correo vacío`, 'error', contenedorInput);
+                e.preventDefault();
+                return;
+            }
+            if(fecha.value){
+                contenedorInput = '.fecha';
+                var edad = calcularEdad(fecha.value);
+                if(edad >= 18){
+                }else{
+                    e.preventDefault();
+                    alerta(`<i class="fad fa-times"></i> Eres menor de edad, tienes ${edad} años`, 'error', contenedorInput);
+                }
+            }else{
+                alerta(`<i class="fad fa-times"></i> Seleccione su fecha de nacimiento`, 'error', contenedorInput);
+                e.preventDefault();
+            }
+            if(cedula.value){
+                if(validarCedula(cedula.value))
+                {
 
+                }
+                else{
+                    e.preventDefault();
+                }
+            }
+            if(hombre.checked || mujer.checked){
+            }else{
+                e.preventDefault();
+            }
+
+        });
         //Funcion paara validar la cédula
-        function validarCedula(e){
+        function validarCedula(cedulaCompleta){
+            if( cedulaCompleta.length >= 11){
+                let contenedorInput = '';
+                const cedula = cedulaCompleta.substring(0,10);
+                const digitoVerificador = cedulaCompleta.substring(10, 11);
+                const ultimoDigito = parseInt(digitoVerificador);
+
+                const cedulaArray = cedula.split('');
+                const arrayEscala = [1,2,1,2,1,2,1,2,1,2];
+                let cadenaString = '';
+                
+                for (let index = 0; index < 10; index++) {
+                    const result = cedulaArray[index] * arrayEscala[index];
+                    cadenaString += result;
+                }
+                let suma = 0;
+                const resultadoArray=cadenaString.split('');
+                resultadoArray.forEach(numero=>{
+                    suma+=parseInt(numero);
+                });
+                const decenaSuperior = suma - (suma%10) + 10;
+                const total = decenaSuperior - suma;
+                if(total === ultimoDigito){
+                    return true;
+                }else{
+                    let contenedorInput = '.cedula';
+                    alerta(`<i class="fad fa-times"></i> La cédula está incorrecta o no existe, intentelo de nuevo`, 'error', contenedorInput);
+                }
+            }
 
         }
 

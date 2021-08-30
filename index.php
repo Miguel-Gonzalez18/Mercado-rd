@@ -36,7 +36,7 @@
         <main class="articulos">
             <a href="#">
                 <div class="card">
-                    <div class="card-head" style="background-image: url('build/fotos/laptop');">
+                    <div class="card-head" style="background-image: url('build/fotos/carro.jpg');">
                         <div class="img-user" style="background-image: url('build/img/user.svg');"></div>
                     </div>
                     <div class="card-body">
