@@ -8,6 +8,7 @@
      <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
      <link rel="shortcut icon" type="image/x-icon" href="build/img/icono.ico">
      <link rel="stylesheet" href="build/css/crearCuentacss.css">
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
      <div class="contenedor">
@@ -32,7 +33,7 @@
                                    <div class="step__header">
                                         <h2 class="step__title">Información Personal</h2>
                                    </div>
-                                   <div class="step__body">
+                                   <div class="step__body paso1">
                                         <input type="text" placeholder="Nombre" class="step__input" id="nombre" name="nombre">
                                         <input type="text" placeholder="Apellido" class="step__input" id="Apellido" name="apellido">
                                         <input type="date" placeholder="Fecha de nacimiento" class="step__input" id="fechanac" name="fechanac">
@@ -46,7 +47,7 @@
                                    <div class="step__header">
                                         <h2 class="step__title">Información Personal</h2>
                                    </div>
-                                   <div class="step__body">
+                                   <div class="step__body paso2">
                                         <select name="provincias" id="provincias" class="step__input">
                                         <option value="0" selected>De donde eres?</option>
                                         <option value="Azua">Azua</option>
@@ -100,12 +101,12 @@
                                    <div class="step__header">
                                         <h2 class="step__title">Información de la cuenta</h2>
                                    </div>
-                                   <div class="step__body">
+                                   <div class="step__body paso3">
                                         <input type="text" placeholder="Nombre de usuaio" class="step__input" id="user" name="user">
                                         <input type="text" placeholder="Contraseña" class="step__input" id="pass" name="pass">
                                         <input type="text" placeholder="Confirmar contraseña" class="step__input" id="pass2" name="pass2">
                                         <div class="checkbox">
-                                             <input type="checkbox" id="terminos" name="terminosCondiciones" checked>
+                                             <input type="checkbox" id="terminos" name="terminosCondiciones">
                                              <label for="terminos">Aceptar los terminos y condiciones</label>
                                         </div>
                                    </div>

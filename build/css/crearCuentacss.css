@@ -319,3 +319,18 @@ body::-webkit-scrollbar-thumb
      }
      
 }
+.advertencia{
+    font-size: .8rem;
+    color: #C99806;
+    padding: .5rem;
+}
+.correcto{
+    font-size: .8rem;
+    color: #17A2B8;
+    padding: .5rem;
+}
+.error{
+    font-size: .8rem;
+    color: #C0392B;
+    padding: .5rem;
+}

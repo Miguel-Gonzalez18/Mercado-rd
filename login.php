@@ -11,7 +11,7 @@
      <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="build/css/logincss.css">
      <link rel="shortcut icon" type="image/x-icon" href="build/img/icono.ico">
-     <script src="build/js/bundle"></script>
+     <script src="build/js/bundle.js"></script>
 </head>
 <body>
 <div class="contenedor">
