@@ -108,14 +108,14 @@
                     move_uploaded_file($rfoto, 'build/productos/'.$name);
 
                     $subirimg = mysqli_query($conexion , "INSERT INTO fotos (`usuario`,`fecha`,`ruta`,`album`,`producto`) values ('".$_SESSION['ID']."',now(),'$name','".$albumaleatorio."','$next_increment')");
-                    $llamadoimg = mysqli_query( $conexion ,"SELECT `id__fot` FROM fotos WHERE `usuario` = '".$_SESSION['ID']."' ORDER BY `fecha` desc");
-	                $llaim = mysqli_fetch_array($llamadoimg , MYSQLI_ASSOC);
                 }
                 else{
                     exit;
                 }
             }
-            $queryasubir ="INSERT INTO productos (`usuario`,`fecha`,`contenido`,`imagen`, `titulo`,`precio`, `estado`,`categoria`,`marca`) values ('".$_SESSION['ID']."',now(),'" .$_POST['descripcion']. "','".$alb['id_alb']."','".$_POST['nombre']."','".$_POST['precio']."','".$_POST['estado']."','".$_POST['categoria']."','".$_POST['marca']."')";
+            $llamadoimg = mysqli_query( $conexion ,"SELECT `id__fot` FROM fotos WHERE `album` = '$albumaleatorio' AND usuario = '".$_SESSION['ID']."' ORDER BY `fecha` desc");
+	        $llaim = mysqli_fetch_array($llamadoimg , MYSQLI_ASSOC);
+            $queryasubir ="INSERT INTO productos (`usuario`,`fecha`,`contenido`,`imagen`, `titulo`,`precio`, `estado`,`categoria`,`marca`) values ('".$_SESSION['ID']."',now(),'" .$_POST['descripcion']. "','".$llaim['id__fot']."','".$_POST['nombre']."','".$_POST['precio']."','".$_POST['estado']."','".$_POST['categoria']."','".$_POST['marca']."')";
             $subir = mysqli_query( $conexion , $queryasubir );
             if($subir) {
                 echo '<script>window.location="index.php"</script>';
