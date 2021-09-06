@@ -115,17 +115,25 @@
         <div class="anuncios-usuario">
             <h3 class="h3anuncios">Tus anuncios</h3>
             <div class="articulos">
+                <?php
+                $queryAnuncios = "SELECT productos.titulo, productos.precio, productos.fecha, fotos.ruta, fotos.album, usuarios.fotoperfil, usuarios.id_usuario FROM productos INNER JOIN fotos ON productos.imagen = fotos.id__fot INNER JOIN usuarios ON usuarios.id_usuario = productos.usuario WHERE id_usuario = '".$_SESSION['ID']."' ORDER BY productos.fecha DESC";
+                $result = mysqli_query($conexion, $queryAnuncios);
+                while($row = mysqli_fetch_assoc($result)){
+                ?>
                 <a href="#">
                     <div class="card">
-                        <div class="card-head" style="background-image: url('build/fotos/laptop');">
-                            <div class="img-user" style="background-image: url('build/img/user.svg');"></div>
+                        <div class="card-head" style="background-image:url(build/productos/<?php echo($row['ruta']);?>)" alt="<?php echo( $row['titulo']);?>">
+                            <div class="img-user" style="background-image: url('build/fotos/<?php echo($row['fotoperfil'])?>.jpg');"></div>
                         </div>
                         <div class="card-body">
-                            <h2><span>RD$  </span>65,000</h3>
-                            <h3>LAPTOP LENOVO LEGION 5 15ARHO5 AMD RYZEN 7</h3>
+                            <h2><span>RD$  </span><?php echo ($row['precio']);?></h3>
+                            <h3><?php echo ($row['titulo']);?></h3>
                         </div>
                     </div>
                 </a>
+                <?php
+                }
+                ?>
             </div>
         </div>
         <?php
