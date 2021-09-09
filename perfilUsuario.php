@@ -127,7 +127,7 @@
                         </div>
                         <div class="card-body">
                             <h2><span>RD$  </span><?php echo ($row['precio']);?></h3>
-                            <h3><?php echo ($row['titulo']);?></h3>
+                            <h3 style="text-transform: uppercase;"><?php echo ($row['titulo']);?></h3>
                         </div>
                     </div>
                 </a>
