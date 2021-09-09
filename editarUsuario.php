@@ -239,6 +239,9 @@ if(!empty($desprendible))    {
   
 }
     ?>
+    <?php
+        echo footer();
+    ?>
     <script src="build/js/bundle.js"></script>
 </body>
 </html>

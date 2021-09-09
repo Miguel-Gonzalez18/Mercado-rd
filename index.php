@@ -30,16 +30,16 @@
         echo cabecera();
     ?>
     <div class="contenido-principal">
-    <?php
-        echo aside();
-    ?>
+        <?php
+            echo aside();
+        ?>
         <main class="articulos">
             <?php
-                $queryAnuncios = "SELECT productos.titulo, productos.precio, productos.fecha, fotos.ruta, fotos.album, usuarios.fotoperfil, usuarios.id_usuario FROM productos INNER JOIN fotos ON productos.imagen = fotos.id__fot INNER JOIN usuarios ON usuarios.id_usuario = productos.usuario ORDER BY productos.fecha DESC LIMIT 500;";
+                $queryAnuncios = "SELECT productos.id_pub, productos.titulo, productos.precio, productos.fecha, fotos.ruta, fotos.album, usuarios.fotoperfil, usuarios.id_usuario FROM productos INNER JOIN fotos ON productos.imagen = fotos.id__fot INNER JOIN usuarios ON usuarios.id_usuario = productos.usuario ORDER BY productos.fecha DESC LIMIT 500;";
                 $result = mysqli_query($conexion, $queryAnuncios);
                 while($row = mysqli_fetch_assoc($result)){
             ?>
-            <a href="#">
+            <a href="anuncio.php?user=<?php echo $row['id_usuario']?>&album=<?php echo $row['album']?>&titulo=<?php echo $row['titulo']?>&title=<?php echo $row['titulo']?>&img1=<?php echo $row['ruta']?>&idProducto=<?php echo $row['id_pub']?>">
                 <div class="card">
                     <div class="card-head" style="background-image:url(build/productos/<?php echo($row['ruta']);?>)" alt="<?php echo( $row['titulo']);?>">
                     <?php

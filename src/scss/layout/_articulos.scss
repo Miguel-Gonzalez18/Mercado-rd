@@ -41,8 +41,8 @@
             overflow: hidden;
         }
         @include desktop{
-            min-width: 15rem;
-            max-width: 15rem;
+            min-width: 10rem;
+            max-width: 13rem;
             min-height: 18rem;
             max-height: 20rem;
             overflow: hidden;
@@ -71,6 +71,9 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
+        }
+        h3{
+            font-size: 1rem;
         }
     }
     
