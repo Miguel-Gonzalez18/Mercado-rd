@@ -91,6 +91,14 @@
                     margin: 1rem auto;
                     @include telefono{
                         font-size: 1rem;
+                        display: block;
+                        width: 16rem;
+                    }
+                    @include tablet{
+                        width: 100%;
+                    }
+                    i{
+                        color: $blanco;
                     }
                 }
             }

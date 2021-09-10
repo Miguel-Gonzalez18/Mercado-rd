@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 09-09-2021 a las 15:31:55
+-- Tiempo de generación: 10-09-2021 a las 15:55:25
 -- Versión del servidor: 8.0.26-0ubuntu0.20.04.2
 -- Versión de PHP: 7.4.3
 
@@ -40,8 +40,7 @@ CREATE TABLE `albumes` (
 --
 
 INSERT INTO `albumes` (`id_alb`, `usuario`, `fecha`, `nombre`) VALUES
-(1, 1, '2021-09-06', 'ACC6596875AE1DB963A'),
-(2, 1, '2021-09-06', '4A799E906CB5F8490ED');
+(1, 1, '2021-09-10', '36357783E2596BC248A');
 
 -- --------------------------------------------------------
 
@@ -76,12 +75,9 @@ CREATE TABLE `fotos` (
 --
 
 INSERT INTO `fotos` (`id__fot`, `usuario`, `fecha`, `ruta`, `album`, `producto`) VALUES
-(1, 1, '2021-09-06', '169E56791BB49.jpg', 'ACC6596875AE1DB963A', 1),
-(2, 1, '2021-09-06', '188B22893844E.jpg', 'ACC6596875AE1DB963A', 1),
-(3, 1, '2021-09-06', '1EA0AE15E960D.jpg', 'ACC6596875AE1DB963A', 1),
-(4, 1, '2021-09-06', '142D198FEE690.jpg', '4A799E906CB5F8490ED', 1),
-(5, 1, '2021-09-06', '1306CD4BF3C87.jpg', '4A799E906CB5F8490ED', 1),
-(6, 1, '2021-09-06', '107B165C8291B.jpg', '4A799E906CB5F8490ED', 1);
+(1, 1, '2021-09-10', '3AA48555AD834.jpg', '36357783E2596BC248A', 3),
+(2, 1, '2021-09-10', '35CC16DF28E8D.jpg', '36357783E2596BC248A', 3),
+(3, 1, '2021-09-10', '3036EAEA85D8B.jpg', '36357783E2596BC248A', 3);
 
 -- --------------------------------------------------------
 
@@ -108,8 +104,7 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id_pub`, `usuario`, `fecha`, `titulo`, `contenido`, `precio`, `estado`, `imagen`, `categoria`, `comentarios`, `marca`) VALUES
-(1, 1, '2021-09-06 16:10:09', 'Jordan tenis Air Jordan 1 High de jordan x Dior.', 'Un diseño atractivo y retro, unido a una comodidad premium.\r\n\r\nAsí son las nuevas zapatillas Nike Air Jordan 1 Retro High para el público masculino.\r\n\r\nEs una reedición que hace referencia a la versión original del Air Jordan 1.\r\nEl Air Jordan 1 es una de las zapatillas más vendidas de Nike.', '3500', 0x31, 1, 7, NULL, 'Air Jordan'),
-(2, 1, '2021-09-06 16:40:40', 'Cortinas', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat at sint iure accusamus, corrupti nam esse temporibus doloribus distinctio! Quos veritatis quis cum, quaerat aliquam aliquid alias autem amet iusto.', '1500', 0x31, 4, 5, NULL, '');
+(1, 1, '2021-09-10 15:34:29', 'Tenis Jordan 4 Size 9 usado en exelentes condiciones', 'Nuevos en caja.\r\nSize de Damas y Caballeros.\r\nEnvios disponible.\r\nTrabajamos con todas las marcas y modelos.\r\nSi no visualizas el color o modelo que quieres contactanos.', '3800', 0x31, 1, 7, NULL, 'Jordán');
 
 -- --------------------------------------------------------
 
@@ -137,7 +132,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `username`, `nombre`, `apellido`, `mail`, `fotoperfil`, `fecha_nac`, `genero`, `cedula`, `telefono`, `direccion`, `password`) VALUES
-(1, 'Miguel', 'Miguel Ángel', 'González', 'axtra2766@gmail.com', 'A71AC9F2AC33', '2001-06-29', 'Hombre', '40232750303', '8493513051', 'Santo Domingo Oeste', '$2y$10$e85hezXtnk9hbjvOM14blOYcS04dIkLCCPewwOFmRnM76Ba59Eu.u');
+(1, 'Miguel', 'Miguel Ángel', 'González', 'axtra2766@gmail.com', '61F4888C6B41', '2001-06-29', 'Hombre', '40232750303', '8493513051', 'Santo Domingo Oeste', '$2y$10$8ax7J2mT3hyj7z/C0D7RBuyunVtTIsaltMqfGEGv2Tdw6meAKxqje');
 
 --
 -- Índices para tablas volcadas
@@ -186,7 +181,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `albumes`
 --
 ALTER TABLE `albumes`
-  MODIFY `id_alb` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_alb` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `comentarios`
@@ -198,13 +193,13 @@ ALTER TABLE `comentarios`
 -- AUTO_INCREMENT de la tabla `fotos`
 --
 ALTER TABLE `fotos`
-  MODIFY `id__fot` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id__fot` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_pub` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_pub` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

@@ -25,11 +25,12 @@
                     $idUsuario = $_GET['user'];
                     $album = $_GET['album'];
                     $idProducto = $_GET['idProducto'];
-                    $queryUser = "SELECT usuarios.nombre, usuarios.apellido, usuarios.fotoperfil, usuarios.telefono, usuarios.direccion, productos.titulo, productos.id_pub, productos.precio, productos.fecha, productos.contenido, productos.estado, fotos.ruta, fotos.album FROM usuarios INNER JOIN productos ON usuarios.id_usuario = productos.usuario INNER JOIN fotos ON fotos.id__fot = productos.imagen WHERE usuarios.id_usuario = '$idUsuario' AND productos.id_pub = '$idProducto'";
+                    $queryUser = "SELECT usuarios.id_usuario, usuarios.nombre, usuarios.apellido, usuarios.fotoperfil, usuarios.telefono, usuarios.direccion, productos.titulo, productos.id_pub, productos.precio, productos.fecha, productos.contenido, productos.estado, fotos.ruta, fotos.album FROM usuarios INNER JOIN productos ON usuarios.id_usuario = productos.usuario INNER JOIN fotos ON fotos.id__fot = productos.imagen WHERE usuarios.id_usuario = '$idUsuario' AND productos.id_pub = '$idProducto'";
                     $resultUser = mysqli_query($conexion, $queryUser);
                     if(!$resultUser){
                         die('error de consulta: '. mysqli_error($conexion));
                     }
+                    $row1 = $resultUser->fetch_assoc();
 
                     $query = "SELECT * FROM fotos WHERE usuario = '$idUsuario' AND album = '$album'";
                     $result = mysqli_query($conexion, $query);
@@ -60,9 +61,6 @@
 					}; 
 					?>
 				</ul>
-			<?php
-                while($row1 = $resultUser->fetch_assoc()){
-            ?>
             <div class="descripcion-producto">
                 <h3>Detalles</h3>
                 <div class="text">
@@ -91,7 +89,7 @@
                 <div class="producto-datos">
                     <div class="producto-btn">
                         <a href="#" class="boton-principal"><i class="fad fa-comment-alt-dots"></i> Chatear con este vendedor</a>
-                        <a href="#" class="boton-secundario"><i class="fad fa-address-card"></i> Ver perfil</a>
+                        <a href="perfilVendedor.php?idUser=<?php echo $row1['id_usuario']?>&img1=<?php echo $row1['ruta']?>&album=<?php echo $row1['album']?>&title=<?php echo $row1['nombre']?>" class="boton-secundario"><i class="fad fa-address-card"></i> Ver perfil</a>
                     </div>
                     <div class="datos-vendedor">
                         <h3><?php echo $row1['titulo']?></h3>
@@ -105,7 +103,6 @@
                         <small>Publicado el: <?php echo $fechaSpanish?></small>
                     </div>
                 </div>
-                <?php }?>
             </div>
         </div>
     </div>

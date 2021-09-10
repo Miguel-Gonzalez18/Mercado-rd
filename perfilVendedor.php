@@ -3,11 +3,12 @@
     include('php/head.php');
     include('php/header.php');
     include('php/footer.php');
-    session_start();
-    if(isset($_SESSION['user'])){
-        $userName=$_SESSION['nombre'];
-        $stmt = $conexion->query("SELECT * FROM usuarios WHERE nombre= '$userName'");
-        $row = $stmt->fetch_assoc();
+    if(isset($_GET['idUser'])){
+        $userId=$_GET['idUser'];
+        $queryProductos = $conexion->query("SELECT productos.id_pub, productos.usuario, productos.titulo, productos.precio, fotos.album, fotos.ruta FROM productos INNER JOIN fotos ON productos.imagen = fotos.id__fot WHERE productos.usuario = $userId");
+
+        $queryusuario = $conexion->query("SELECT * FROM usuarios WHERE id_usuario = $userId");
+        $row2 = $queryusuario->fetch_assoc();
     }
 ?>
 <!DOCTYPE html>
@@ -19,29 +20,24 @@
     echo cabecera();
 ?>
     <div class="contenedor contenido-usuario">
-        <?php
-            if(isset($_SESSION['user'])){
-                
-        ?>
         <div class="informacion-perfil menu-main">
-            <h3>Tu cuenta</h3>
+            <h3>Cuenta de <?php echo $row2['nombre']?></h3>
             <?php
-                if(isset($_SESSION['fotoperfil'])==null){
+                if(isset($row2['fotoperfil'])==null){
 
             ?>
             <div class="foto-perfil" style="background-image: url('build/img/user.svg');">
             </div>
             <?php } else{?>
-                <div class="foto-perfil" style="background-image: url('build/fotos/<?php echo( $_SESSION['fotoperfil']).'.jpg'; ?>');">
+                <div class="foto-perfil" style="background-image: url('build/fotos/<?php echo( $row2['fotoperfil']).'.jpg'; ?>');">
                 </div>
             <?php }?>
-            <p><?php echo $_SESSION['nombre']?></p>
+            <p><?php echo $row2['nombre']?></p>
             <ul class="lista-informacion">
-                <li><i class="fas fa-map-marker-alt"></i> <?php echo $row['direccion']?></li>
-                <li><i class="fas fa-phone-square-alt"></i> <?php echo $row['telefono']?></li>
+                <li><i class="fas fa-map-marker-alt"></i> <?php echo $row2['direccion']?></li>
+                <li><i class="fas fa-phone-square-alt"></i> <?php echo $row2['telefono']?></li>
                 <li>
-                    <a href="editarUsuario.php?title=Editar tu información" class="boton boton-principal"><i class="fas fa-edit"></i> Editar perfil</a>
-                    <a href="php/cerrarsesion.php" class="boton boton-principal btn-cerrarsesion"><i class="fad fa-sign-in-alt"></i> Cerrar sesión</a>
+                    <a href="#" class="boton-principal"><i class="fas fa-comment-alt-lines"></i> Chatear con este vendedor</a>
                 </li>
             </ul>
             <h3>Explorar</h3>
@@ -112,40 +108,27 @@
             </div>
         </div>
         <div class="anuncios-usuario">
-            <h3 class="h3anuncios">Tus anuncios</h3>
+            <h3 class="h3anuncios">Anuncios de <?php echo $row2['nombre']?></h3>
             <div class="articulos">
                 <?php
-                $queryAnuncios = "SELECT productos.id_pub, productos.titulo, productos.precio, productos.fecha, fotos.ruta, fotos.album, usuarios.fotoperfil, usuarios.id_usuario FROM productos INNER JOIN fotos ON productos.imagen = fotos.id__fot INNER JOIN usuarios ON usuarios.id_usuario = productos.usuario WHERE id_usuario = '".$_SESSION['ID']."' ORDER BY productos.fecha DESC";
-                $result = mysqli_query($conexion, $queryAnuncios);
-                if(mysqli_num_rows($result)>0){
-                    while($row = mysqli_fetch_assoc($result)){
-               
+                while($row1 = $queryProductos->fetch_assoc()){
                 ?>
-                <a href="anuncio.php?user=<?php echo $row['id_usuario']?>&album=<?php echo $row['album']?>&titulo=<?php echo $row['titulo']?>&title=<?php echo $row['titulo']?>&img1=<?php echo $row['ruta']?>&idProducto=<?php echo $row['id_pub']?>">
+                <a href="anuncio.php?user=<?php echo $row2['id_usuario']?>&album=<?php echo $row1['album']?>&titulo=<?php echo $row1['titulo']?>&title=<?php echo $row1['titulo']?>&img1=<?php echo $row1['ruta']?>&idProducto=<?php echo $row1['id_pub']?>">
                     <div class="card">
-                        <div class="card-head" style="background-image:url(build/productos/<?php echo($row['ruta']);?>)" alt="<?php echo( $row['titulo']);?>">
-                            <div class="img-user" style="background-image: url('build/fotos/<?php echo($row['fotoperfil'])?>.jpg');"></div>
+                        <div class="card-head" style="background-image:url(build/productos/<?php echo($row1['ruta']);?>)" alt="<?php echo( $row1['titulo']);?>">
+                            <div class="img-user" style="background-image: url('build/fotos/<?php echo($row2['fotoperfil'])?>.jpg');"></div>
                         </div>
                         <div class="card-body">
-                            <h2><span>RD$  </span><?php echo ($row['precio']);?></h3>
-                            <h3 style="text-transform: uppercase;"><?php echo ($row['titulo']);?></h3>
+                            <h2><span>RD$  </span><?php echo ($row1['precio']);?></h3>
+                            <h3 style="text-transform: uppercase;"><?php echo ($row1['titulo']);?></h3>
                         </div>
                     </div>
                 </a>
-                <?php
-                    }
-                }else{
-
-                ?>
-                <h3>Aun no tienes anuncios publicados</h3>
                 <?php
                 }
                 ?>
             </div>
         </div>
-        <?php
-            }
-        ?>
     </div>
         <?php
             if(isset($_SESSION['user'])){
