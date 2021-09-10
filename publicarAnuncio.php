@@ -3,7 +3,7 @@
     include('php/head.php');
     include('php/header.php');
     include('php/footer.php');
-    @include('php/aside.php');
+    include('php/aside.php');
     session_start();
 ?>
 <!DOCTYPE html>
